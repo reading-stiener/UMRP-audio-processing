@@ -1,0 +1,150 @@
+file_name,silence_list,silence_percent
+/home/camel/Documents/URMP_audio_processing/URMP/12_Spring_vn_vn_vc/AuSep_3_vc_12_Spring.wav,"[(39.42748299319728, 42.4692970521542), (68.61496598639455, 83.5221768707483), (96.01451247165532, 99.61360544217688)]",0.16459737495565815
+/home/camel/Documents/URMP_audio_processing/URMP/12_Spring_vn_vn_vc/AuSep_2_vn_12_Spring.wav,"[(68.96326530612245, 75.00045351473923), (96.5253514739229, 109.64462585034013)]",0.1463284852784676
+/home/camel/Documents/URMP_audio_processing/URMP/12_Spring_vn_vn_vc/AuSep_1_vn_12_Spring.wav,"[(74.11809523809524, 79.31936507936508)]",0.03973040085136579
+/home/camel/Documents/URMP_audio_processing/URMP/28_Fugue_fl_ob_cl_bn/AuSep_1_fl_28_Fugue.wav,"[(0.0, 14.675011337868481), (57.74802721088435, 65.13197278911565), (98.05786848072562, 107.11365079365079)]",0.17823889332269227
+/home/camel/Documents/URMP_audio_processing/URMP/28_Fugue_fl_ob_cl_bn/AuSep_4_bn_28_Fugue.wav,"[(0.0, 23.1502947845805), (107.55482993197279, 121.69578231292518)]",0.21362064378824155
+/home/camel/Documents/URMP_audio_processing/URMP/28_Fugue_fl_ob_cl_bn/AuSep_2_ob_28_Fugue.wav,"[(0.0, 6.013968253968254), (36.91972789115646, 52.66285714285714)]",0.12463421122639
+/home/camel/Documents/URMP_audio_processing/URMP/28_Fugue_fl_ob_cl_bn/AuSep_3_cl_28_Fugue.wav,"[(0.0, 31.7881179138322), (76.02213151927438, 88.30548752834467)]",0.25246076084064906
+/home/camel/Documents/URMP_audio_processing/URMP/35_Rondeau_vn_vn_va_db/AuSep_3_va_35_Rondeau.wav,"[(0.0, 4.504671201814059)]",0.03514492753623188
+/home/camel/Documents/URMP_audio_processing/URMP/35_Rondeau_vn_vn_va_db/AuSep_4_db_35_Rondeau.wav,"[(0.0, 4.73687074829932)]",0.03695652173913044
+/home/camel/Documents/URMP_audio_processing/URMP/35_Rondeau_vn_vn_va_db/AuSep_1_vn_35_Rondeau.wav,"[(0.0, 4.667210884353741)]",0.03641304347826086
+/home/camel/Documents/URMP_audio_processing/URMP/35_Rondeau_vn_vn_va_db/AuSep_2_vn_35_Rondeau.wav,"[(0.0, 5.061950113378685)]",0.0394927536231884
+/home/camel/Documents/URMP_audio_processing/URMP/02_Sonata_vn_vn/AuSep_2_vn_02_Sonata.wav,"[(0.0, 4.6439909297052155)]",0.10085728693898134
+/home/camel/Documents/URMP_audio_processing/URMP/02_Sonata_vn_vn/AuSep_1_vn_02_Sonata.wav,"[(0.0, 4.551111111111111)]",0.09884014120020171
+/home/camel/Documents/URMP_audio_processing/URMP/42_Arioso_tpt_tpt_hn_tbn_tba/AuSep_1_tpt_42_Arioso.wav,"[(0.0, 8.196643990929704), (135.20979591836735, 139.11074829931974), (166.83537414965986, 170.29514739229026)]",0.06100892369331644
+/home/camel/Documents/URMP_audio_processing/URMP/42_Arioso_tpt_tpt_hn_tbn_tba/AuSep_4_tbn_42_Arioso.wav,"[(0.0, 7.63936507936508)]",0.029958113276270258
+/home/camel/Documents/URMP_audio_processing/URMP/42_Arioso_tpt_tpt_hn_tbn_tba/AuSep_2_tpt_42_Arioso.wav,"[(0.0, 7.918004535147392)]",0.031050810417046073
+/home/camel/Documents/URMP_audio_processing/URMP/42_Arioso_tpt_tpt_hn_tbn_tba/AuSep_3_hn_42_Arioso.wav,"[(0.0, 8.219863945578231), (12.654875283446712, 17.322086167800453), (21.037278911564627, 24.543492063492064), (53.38267573696145, 57.7015873015873)]",0.0812238207976689
+/home/camel/Documents/URMP_audio_processing/URMP/42_Arioso_tpt_tpt_hn_tbn_tba/AuSep_5_tba_42_Arioso.wav,"[(0.0, 4.899410430839002)]",0.01921325805864141
+/home/camel/Documents/URMP_audio_processing/URMP/32_Fugue_vn_vn_va_vc/AuSep_1_vn_32_Fugue.wav,"[(0.0, 5.015510204081632), (5.363809523809524, 14.303492063492063), (56.81922902494331, 64.6443537414966), (97.500589569161, 107.34585034013605)]",0.18213426049745926
+/home/camel/Documents/URMP_audio_processing/URMP/32_Fugue_vn_vn_va_vc/AuSep_3_va_32_Fugue.wav,"[(81.17696145124717, 84.54385487528344)]",0.019390211286440202
+/home/camel/Documents/URMP_audio_processing/URMP/32_Fugue_vn_vn_va_vc/AuSep_2_vn_32_Fugue.wav,"[(0.0, 4.73687074829932), (36.826848072562356, 51.803718820861675)]",0.1135330302219845
+/home/camel/Documents/URMP_audio_processing/URMP/32_Fugue_vn_vn_va_vc/AuSep_4_vc_32_Fugue.wav,"[(0.0, 22.801995464852606), (106.858231292517, 121.2778231292517), (136.53333333333333, 140.1556462585034)]",0.23522332174378177
+/home/camel/Documents/URMP_audio_processing/URMP/29_Fugue_fl_fl_ob_cl/AuSep_4_cl_29_Fugue.wav,"[(0.0, 20.758639455782312), (104.65233560090702, 118.74684807256236)]",0.20264614553800467
+/home/camel/Documents/URMP_audio_processing/URMP/29_Fugue_fl_fl_ob_cl/AuSep_2_fl_29_Fugue.wav,"[(0.0, 3.1346938775510202), (34.38875283446712, 49.85324263038549), (124.92335600907029, 128.70820861678004)]",0.13014715809369518
+/home/camel/Documents/URMP_audio_processing/URMP/29_Fugue_fl_fl_ob_cl/AuSep_3_ob_29_Fugue.wav,"[(0.0, 28.862403628117914), (73.07319727891156, 85.40299319727892)]",0.23950317267449717
+/home/camel/Documents/URMP_audio_processing/URMP/29_Fugue_fl_fl_ob_cl/AuSep_1_fl_29_Fugue.wav,"[(0.0, 11.795736961451247), (54.4043537414966, 62.15981859410431), (95.0160544217687, 104.11827664399092)]",0.1665991629539625
+/home/camel/Documents/URMP_audio_processing/URMP/34_Fugue_tpt_tpt_hn_tbn/AuSep_1_tpt_34_Fugue.wav,"[(0.0, 13.722993197278912), (56.58702947845805, 64.13351473922903), (97.17551020408163, 106.18485260770976)]",0.17384348753499537
+/home/camel/Documents/URMP_audio_processing/URMP/34_Fugue_tpt_tpt_hn_tbn/AuSep_4_tbn_34_Fugue.wav,"[(0.0, 22.151836734693877), (106.78857142857143, 120.6508843537415)]",0.20677243034262097
+/home/camel/Documents/URMP_audio_processing/URMP/34_Fugue_tpt_tpt_hn_tbn/AuSep_3_hn_34_Fugue.wav,"[(0.0, 30.975419501133786), (74.93079365079365, 87.3534693877551)]",0.24916677776296492
+/home/camel/Documents/URMP_audio_processing/URMP/34_Fugue_tpt_tpt_hn_tbn/AuSep_2_tpt_34_Fugue.wav,"[(0.0, 5.154829931972789), (36.40888888888889, 51.7340589569161)]",0.11758432209038795
+/home/camel/Documents/URMP_audio_processing/URMP/08_Spring_fl_vn/AuSep_1_fl_08_Spring.wav,[],0.0
+/home/camel/Documents/URMP_audio_processing/URMP/08_Spring_fl_vn/AuSep_2_vn_08_Spring.wav,[],0.0
+/home/camel/Documents/URMP_audio_processing/URMP/31_Slavonic_tpt_tpt_hn_tbn/AuSep_2_tpt_31_Slavonic.wav,[],0.0
+/home/camel/Documents/URMP_audio_processing/URMP/31_Slavonic_tpt_tpt_hn_tbn/AuSep_1_tpt_31_Slavonic.wav,"[(37.08226757369614, 42.16743764172335), (42.4692970521542, 46.068390022675736)]",0.10618966496308913
+/home/camel/Documents/URMP_audio_processing/URMP/31_Slavonic_tpt_tpt_hn_tbn/AuSep_3_hn_31_Slavonic.wav,[],0.0
+/home/camel/Documents/URMP_audio_processing/URMP/31_Slavonic_tpt_tpt_hn_tbn/AuSep_4_tbn_31_Slavonic.wav,[],0.0
+/home/camel/Documents/URMP_audio_processing/URMP/10_March_tpt_sax/AuSep_1_tpt_10_March.wav,"[(33.18131519274377, 38.22004535147392), (74.02521541950114, 77.22956916099773)]",0.08022598870056484
+/home/camel/Documents/URMP_audio_processing/URMP/10_March_tpt_sax/AuSep_2_sax_10_March.wav,[],0.0
+/home/camel/Documents/URMP_audio_processing/URMP/24_Pirates_vn_vn_va_vc/AuSep_2_vn_24_Pirates.wav,"[(13.305034013605443, 18.784943310657596)]",0.11002331002330999
+/home/camel/Documents/URMP_audio_processing/URMP/24_Pirates_vn_vn_va_vc/AuSep_3_va_24_Pirates.wav,[],0.0
+/home/camel/Documents/URMP_audio_processing/URMP/24_Pirates_vn_vn_va_vc/AuSep_1_vn_24_Pirates.wav,[],0.0
+/home/camel/Documents/URMP_audio_processing/URMP/24_Pirates_vn_vn_va_vc/AuSep_4_vc_24_Pirates.wav,[],0.0
+/home/camel/Documents/URMP_audio_processing/URMP/36_Rondeau_vn_vn_va_vc/AuSep_4_vc_36_Rondeau.wav,"[(0.0, 4.597551020408163)]",0.0358695652173913
+/home/camel/Documents/URMP_audio_processing/URMP/36_Rondeau_vn_vn_va_vc/AuSep_3_va_36_Rondeau.wav,"[(0.0, 4.504671201814059), (80.01596371882086, 83.12743764172336)]",0.05942028985507254
+/home/camel/Documents/URMP_audio_processing/URMP/36_Rondeau_vn_vn_va_vc/AuSep_2_vn_36_Rondeau.wav,"[(0.0, 5.061950113378685)]",0.0394927536231884
+/home/camel/Documents/URMP_audio_processing/URMP/36_Rondeau_vn_vn_va_vc/AuSep_1_vn_36_Rondeau.wav,"[(0.0, 4.667210884353741)]",0.03641304347826086
+/home/camel/Documents/URMP_audio_processing/URMP/04_Allegro_fl_fl/AuSep_1_fl_04_Allegro.wav,"[(0.0, 3.1811337868480725)]",0.020242316784869974
+/home/camel/Documents/URMP_audio_processing/URMP/04_Allegro_fl_fl/AuSep_2_fl_04_Allegro.wav,[],0.0
+/home/camel/Documents/URMP_audio_processing/URMP/20_Pavane_tpt_vn_vc/AuSep_2_vn_20_Pavane.wav,"[(0.0, 3.297233560090703), (7.569705215419501, 12.979954648526077), (27.678185941043083, 30.998639455782314), (87.81786848072562, 91.5330612244898)]",0.11805676475709564
+/home/camel/Documents/URMP_audio_processing/URMP/20_Pavane_tpt_vn_vc/AuSep_3_vc_20_Pavane.wav,"[(0.0, 6.292607709750567), (15.789569160997733, 19.52798185941043), (53.823854875283445, 59.23410430839002), (59.37342403628118, 63.52979591836735), (120.81342403628118, 124.01777777777778)]",0.1709907713738465
+/home/camel/Documents/URMP_audio_processing/URMP/20_Pavane_tpt_vn_vc/AuSep_1_tpt_20_Pavane.wav,"[(0.0, 22.523356009070294), (22.593015873015872, 30.766439909297052), (39.381043083900224, 42.44607709750567), (50.6659410430839, 54.72943310657596), (108.25142857142858, 114.84589569160998), (118.90938775510205, 124.01777777777778)]",0.37140867142608397
+/home/camel/Documents/URMP_audio_processing/URMP/27_King_vn_vn_va_sax/AuSep_3_va_27_King.wav,[],0.0
+/home/camel/Documents/URMP_audio_processing/URMP/27_King_vn_vn_va_sax/AuSep_2_vn_27_King.wav,[],0.0
+/home/camel/Documents/URMP_audio_processing/URMP/27_King_vn_vn_va_sax/AuSep_4_sax_27_King.wav,[],0.0
+/home/camel/Documents/URMP_audio_processing/URMP/27_King_vn_vn_va_sax/AuSep_1_vn_27_King.wav,[],0.0
+/home/camel/Documents/URMP_audio_processing/URMP/06_Entertainer_sax_sax/AuSep_2_sax_06_Entertainer.wav,"[(0.0, 4.6439909297052155)]",0.05306447333510215
+/home/camel/Documents/URMP_audio_processing/URMP/06_Entertainer_sax_sax/AuSep_1_sax_06_Entertainer.wav,"[(0.0, 3.0882539682539685)]",0.03528787476784293
+/home/camel/Documents/URMP_audio_processing/URMP/16_Surprise_tpt_tpt_sax/AuSep_2_tpt_16_Surprise.wav,"[(0.0, 4.667210884353741)]",0.08800350262697022
+/home/camel/Documents/URMP_audio_processing/URMP/16_Surprise_tpt_tpt_sax/AuSep_3_sax_16_Surprise.wav,"[(0.0, 4.31891156462585)]",0.08143607705779334
+/home/camel/Documents/URMP_audio_processing/URMP/16_Surprise_tpt_tpt_sax/AuSep_1_tpt_16_Surprise.wav,"[(0.0, 4.342131519274377)]",0.0818739054290718
+/home/camel/Documents/URMP_audio_processing/URMP/14_Waltz_fl_fl_cl/AuSep_1_fl_14_Waltz.wav,[],0.0
+/home/camel/Documents/URMP_audio_processing/URMP/14_Waltz_fl_fl_cl/AuSep_2_fl_14_Waltz.wav,[],0.0
+/home/camel/Documents/URMP_audio_processing/URMP/14_Waltz_fl_fl_cl/AuSep_3_cl_14_Waltz.wav,[],0.0
+/home/camel/Documents/URMP_audio_processing/URMP/43_Chorale_tpt_tpt_hn_tbn_tba/AuSep_4_tbn_43_Chorale.wav,"[(0.0, 3.5294331065759637)]",0.06602953953084274
+/home/camel/Documents/URMP_audio_processing/URMP/43_Chorale_tpt_tpt_hn_tbn_tba/AuSep_5_tba_43_Chorale.wav,"[(0.0, 3.5062131519274375)]",0.06559513466550826
+/home/camel/Documents/URMP_audio_processing/URMP/43_Chorale_tpt_tpt_hn_tbn_tba/AuSep_3_hn_43_Chorale.wav,"[(0.0, 3.645532879818594)]",0.0682015638575152
+/home/camel/Documents/URMP_audio_processing/URMP/43_Chorale_tpt_tpt_hn_tbn_tba/AuSep_2_tpt_43_Chorale.wav,"[(0.0, 3.575873015873016)]",0.06689834926151174
+/home/camel/Documents/URMP_audio_processing/URMP/43_Chorale_tpt_tpt_hn_tbn_tba/AuSep_1_tpt_43_Chorale.wav,"[(0.0, 3.6687528344671203)]",0.0686359687228497
+/home/camel/Documents/URMP_audio_processing/URMP/30_Fugue_fl_fl_ob_sax/AuSep_2_fl_30_Fugue.wav,"[(0.0, 3.1346938775510202), (34.38875283446712, 49.85324263038549), (124.92335600907029, 128.70820861678004)]",0.13014715809369518
+/home/camel/Documents/URMP_audio_processing/URMP/30_Fugue_fl_fl_ob_sax/AuSep_4_sax_30_Fugue.wav,"[(0.0, 20.78185941043084), (104.35047619047619, 118.74684807256236)]",0.2045362494937222
+/home/camel/Documents/URMP_audio_processing/URMP/30_Fugue_fl_fl_ob_sax/AuSep_3_ob_30_Fugue.wav,"[(0.0, 28.862403628117914), (73.07319727891156, 85.40299319727892)]",0.23950317267449717
+/home/camel/Documents/URMP_audio_processing/URMP/30_Fugue_fl_fl_ob_sax/AuSep_1_fl_30_Fugue.wav,"[(0.0, 11.795736961451247), (54.4043537414966, 62.15981859410431), (95.0160544217687, 104.11827664399092)]",0.1665991629539625
+/home/camel/Documents/URMP_audio_processing/URMP/23_Rejouissance_cl_sax_tba/AuSep_2_sax_23_Rejouissance.wav,"[(0.0, 3.5062131519274375)]",0.04626225490196078
+/home/camel/Documents/URMP_audio_processing/URMP/23_Rejouissance_cl_sax_tba/AuSep_3_tba_23_Rejouissance.wav,"[(0.0, 3.5294331065759637)]",0.046568627450980386
+/home/camel/Documents/URMP_audio_processing/URMP/23_Rejouissance_cl_sax_tba/AuSep_1_cl_23_Rejouissance.wav,[],0.0
+/home/camel/Documents/URMP_audio_processing/URMP/09_Jesus_tpt_vn/AuSep_2_vn_09_Jesus.wav,"[(0.0, 5.944308390022676), (27.051247165532878, 35.50331065759637), (40.658140589569165, 48.78512471655329), (66.17687074829932, 75.09333333333333), (80.52680272108843, 89.09496598639456), (110.38766439909297, 117.21433106575964), (127.0595918367347, 130.58902494331065), (130.82122448979592, 135.2562358276644), (159.45142857142858, 164.3740589569161)]",0.3003269500233534
+/home/camel/Documents/URMP_audio_processing/URMP/09_Jesus_tpt_vn/AuSep_1_tpt_09_Jesus.wav,"[(0.0, 29.466122448979593), (35.64263038548753, 40.72780045351474), (47.438367346938776, 57.12108843537415), (57.72480725623583, 66.94312925170068), (74.62893424036281, 77.92616780045351), (87.09804988662131, 98.05786848072562), (101.30866213151927, 112.59356009070295), (119.60598639455782, 126.27011337868481), (138.1122902494331, 143.31356009070294), (150.23310657596372, 155.82911564625851), (161.75020408163266, 179.44380952380953), (179.49024943310658, 185.66675736961452)]",0.6050910789350771
+/home/camel/Documents/URMP_audio_processing/URMP/22_Rejouissance_sax_tbn_tba/AuSep_3_tba_22_Rejouissance.wav,"[(0.0, 3.5294331065759637)]",0.046568627450980386
+/home/camel/Documents/URMP_audio_processing/URMP/22_Rejouissance_sax_tbn_tba/AuSep_1_sax_22_Rejouissance.wav,[],0.0
+/home/camel/Documents/URMP_audio_processing/URMP/22_Rejouissance_sax_tbn_tba/AuSep_2_tbn_22_Rejouissance.wav,"[(0.0, 3.5294331065759637)]",0.046568627450980386
+/home/camel/Documents/URMP_audio_processing/URMP/26_King_vn_vn_va_vc/AuSep_4_vc_26_King.wav,[],0.0
+/home/camel/Documents/URMP_audio_processing/URMP/26_King_vn_vn_va_vc/AuSep_2_vn_26_King.wav,[],0.0
+/home/camel/Documents/URMP_audio_processing/URMP/26_King_vn_vn_va_vc/AuSep_1_vn_26_King.wav,[],0.0
+/home/camel/Documents/URMP_audio_processing/URMP/26_King_vn_vn_va_vc/AuSep_3_va_26_King.wav,[],0.0
+/home/camel/Documents/URMP_audio_processing/URMP/01_Jupiter_vn_vc/AuSep_1_vn_01_Jupiter.wav,"[(0.0, 4.876190476190477)]",0.07783543365455894
+/home/camel/Documents/URMP_audio_processing/URMP/01_Jupiter_vn_vc/AuSep_2_vc_01_Jupiter.wav,"[(0.0, 6.15328798185941)]",0.09822090437361009
+/home/camel/Documents/URMP_audio_processing/URMP/39_Jerusalem_vn_vn_va_sax_db/AuSep_3_va_39_Jerusalem.wav,"[(0.0, 5.085170068027211)]",0.04269005847953217
+/home/camel/Documents/URMP_audio_processing/URMP/39_Jerusalem_vn_vn_va_sax_db/AuSep_5_db_39_Jerusalem.wav,"[(0.0, 5.456689342403628), (109.50530612244899, 112.7328798185941)]",0.07290448343079914
+/home/camel/Documents/URMP_audio_processing/URMP/39_Jerusalem_vn_vn_va_sax_db/AuSep_4_sax_39_Jerusalem.wav,"[(0.0, 5.526349206349207)]",0.046393762183235876
+/home/camel/Documents/URMP_audio_processing/URMP/39_Jerusalem_vn_vn_va_sax_db/AuSep_2_vn_39_Jerusalem.wav,"[(0.0, 6.710566893424036)]",0.05633528265107213
+/home/camel/Documents/URMP_audio_processing/URMP/39_Jerusalem_vn_vn_va_sax_db/AuSep_1_vn_39_Jerusalem.wav,"[(0.0, 5.270929705215419)]",0.0442495126705653
+/home/camel/Documents/URMP_audio_processing/URMP/33_Elise_tpt_tpt_hn_tbn/AuSep_1_tpt_33_Elise.wav,[],0.0
+/home/camel/Documents/URMP_audio_processing/URMP/33_Elise_tpt_tpt_hn_tbn/AuSep_4_tbn_33_Elise.wav,"[(0.0, 4.342131519274377), (31.393378684807256, 35.27111111111111)]",0.17234664070107109
+/home/camel/Documents/URMP_audio_processing/URMP/33_Elise_tpt_tpt_hn_tbn/AuSep_3_hn_33_Elise.wav,"[(0.0, 4.458231292517007), (31.13795918367347, 35.41043083900227)]",0.18305744888023365
+/home/camel/Documents/URMP_audio_processing/URMP/33_Elise_tpt_tpt_hn_tbn/AuSep_2_tpt_33_Elise.wav,"[(0.0, 4.597551020408163)]",0.09639727361246349
+/home/camel/Documents/URMP_audio_processing/URMP/37_Rondeau_fl_vn_va_cl/AuSep_3_va_37_Rondeau.wav,"[(0.0, 4.504671201814059)]",0.03514492753623188
+/home/camel/Documents/URMP_audio_processing/URMP/37_Rondeau_fl_vn_va_cl/AuSep_2_vn_37_Rondeau.wav,"[(0.0, 5.061950113378685)]",0.0394927536231884
+/home/camel/Documents/URMP_audio_processing/URMP/37_Rondeau_fl_vn_va_cl/AuSep_4_cl_37_Rondeau.wav,"[(0.0, 4.527891156462585)]",0.035326086956521736
+/home/camel/Documents/URMP_audio_processing/URMP/37_Rondeau_fl_vn_va_cl/AuSep_1_fl_37_Rondeau.wav,[],0.0
+/home/camel/Documents/URMP_audio_processing/URMP/38_Jerusalem_vn_vn_va_vc_db/AuSep_4_vc_38_Jerusalem.wav,"[(0.0, 5.572789115646258)]",0.04678362573099415
+/home/camel/Documents/URMP_audio_processing/URMP/38_Jerusalem_vn_vn_va_vc_db/AuSep_2_vn_38_Jerusalem.wav,"[(0.0, 6.710566893424036)]",0.05633528265107213
+/home/camel/Documents/URMP_audio_processing/URMP/38_Jerusalem_vn_vn_va_vc_db/AuSep_1_vn_38_Jerusalem.wav,"[(0.0, 5.270929705215419)]",0.0442495126705653
+/home/camel/Documents/URMP_audio_processing/URMP/38_Jerusalem_vn_vn_va_vc_db/AuSep_3_va_38_Jerusalem.wav,"[(0.0, 5.085170068027211)]",0.04269005847953217
+/home/camel/Documents/URMP_audio_processing/URMP/38_Jerusalem_vn_vn_va_vc_db/AuSep_5_db_38_Jerusalem.wav,"[(0.0, 5.456689342403628), (109.50530612244899, 112.7328798185941)]",0.07290448343079914
+/home/camel/Documents/URMP_audio_processing/URMP/25_Pirates_vn_vn_va_sax/AuSep_4_sax_25_Pirates.wav,[],0.0
+/home/camel/Documents/URMP_audio_processing/URMP/25_Pirates_vn_vn_va_sax/AuSep_1_vn_25_Pirates.wav,[],0.0
+/home/camel/Documents/URMP_audio_processing/URMP/25_Pirates_vn_vn_va_sax/AuSep_3_va_25_Pirates.wav,[],0.0
+/home/camel/Documents/URMP_audio_processing/URMP/25_Pirates_vn_vn_va_sax/AuSep_2_vn_25_Pirates.wav,"[(13.305034013605443, 18.784943310657596)]",0.11002331002330999
+/home/camel/Documents/URMP_audio_processing/URMP/03_Dance_fl_cl/AuSep_1_fl_03_Dance.wav,"[(0.0, 3.3436734693877552)]",0.03444152116718489
+/home/camel/Documents/URMP_audio_processing/URMP/03_Dance_fl_cl/AuSep_2_cl_03_Dance.wav,"[(0.0, 3.320453514739229)]",0.03420234393685721
+/home/camel/Documents/URMP_audio_processing/URMP/17_Nocturne_vn_fl_cl/AuSep_1_vn_17_Nocturne.wav,[],0.0
+/home/camel/Documents/URMP_audio_processing/URMP/17_Nocturne_vn_fl_cl/AuSep_2_fl_17_Nocturne.wav,[],0.0
+/home/camel/Documents/URMP_audio_processing/URMP/17_Nocturne_vn_fl_cl/AuSep_3_cl_17_Nocturne.wav,"[(55.960090702947845, 59.37342403628118)]",0.03569694026226324
+/home/camel/Documents/URMP_audio_processing/URMP/05_Entertainer_tpt_tpt/AuSep_2_tpt_05_Entertainer.wav,"[(0.0, 3.947392290249433)]",0.04533333333333334
+/home/camel/Documents/URMP_audio_processing/URMP/05_Entertainer_tpt_tpt/AuSep_1_tpt_05_Entertainer.wav,[],0.0
+/home/camel/Documents/URMP_audio_processing/URMP/40_Miserere_fl_fl_ob_cl_bn/AuSep_3_ob_40_Miserere.wav,"[(13.188934240362812, 18.204444444444444)]",0.1255813953488372
+/home/camel/Documents/URMP_audio_processing/URMP/40_Miserere_fl_fl_ob_cl_bn/AuSep_4_cl_40_Miserere.wav,[],0.0
+/home/camel/Documents/URMP_audio_processing/URMP/40_Miserere_fl_fl_ob_cl_bn/AuSep_2_fl_40_Miserere.wav,"[(20.805079365079365, 26.726167800453513)]",0.14825581395348833
+/home/camel/Documents/URMP_audio_processing/URMP/40_Miserere_fl_fl_ob_cl_bn/AuSep_5_bn_40_Miserere.wav,[],0.0
+/home/camel/Documents/URMP_audio_processing/URMP/40_Miserere_fl_fl_ob_cl_bn/AuSep_1_fl_40_Miserere.wav,[],0.0
+/home/camel/Documents/URMP_audio_processing/URMP/07_GString_tpt_tbn/AuSep_1_tpt_07_GString.wav,"[(0.0, 7.63936507936508), (7.825124716553288, 12.353015873015874), (91.32408163265306, 95.24825396825396), (235.00916099773244, 238.4689342403628)]",0.07248622589531674
+/home/camel/Documents/URMP_audio_processing/URMP/07_GString_tpt_tbn/AuSep_2_tbn_07_GString.wav,"[(0.0, 7.546485260770975), (90.44172335600906, 93.50675736961452)]",0.03934228650137746
+/home/camel/Documents/URMP_audio_processing/URMP/44_K515_vn_vn_va_va_vc/AuSep_1_vn_44_K515.wav,"[(0.0, 5.178049886621316), (22.894875283446712, 26.354648526077096), (41.424399092970525, 45.67365079365079), (58.46784580498866, 61.90439909297052), (76.74195011337868, 80.2249433106576)]",0.08794721105268584
+/home/camel/Documents/URMP_audio_processing/URMP/44_K515_vn_vn_va_va_vc/AuSep_3_va_44_K515.wav,"[(0.0, 7.75546485260771), (22.96453514739229, 26.9815873015873), (58.30530612244898, 62.48489795918368)]",0.0708320445406743
+/home/camel/Documents/URMP_audio_processing/URMP/44_K515_vn_vn_va_va_vc/AuSep_2_vn_44_K515.wav,"[(62.15981859410431, 65.1784126984127)]",0.013403443653984954
+/home/camel/Documents/URMP_audio_processing/URMP/44_K515_vn_vn_va_va_vc/AuSep_4_va_44_K515.wav,[],0.0
+/home/camel/Documents/URMP_audio_processing/URMP/44_K515_vn_vn_va_va_vc/AuSep_5_vc_44_K515.wav,"[(0.0, 7.476825396825397), (26.679727891156464, 30.67356009070295), (62.39201814058957, 66.91990929705216), (79.83020408163266, 83.28997732426303), (93.71573696145124, 96.85043083900227), (116.98213151927438, 120.97596371882086), (121.46358276643991, 124.78403628117914), (140.62004535147392, 143.801179138322), (193.72408163265305, 196.74267573696144)]",0.1603258067842046
+/home/camel/Documents/URMP_audio_processing/URMP/11_Maria_ob_vc/AuSep_2_vc_11_Maria.wav,"[(0.0, 8.034104308390022)]",0.07711165589480722
+/home/camel/Documents/URMP_audio_processing/URMP/11_Maria_ob_vc/AuSep_1_ob_11_Maria.wav,"[(0.0, 8.266303854875284), (10.634739229024943, 20.340680272108845)]",0.17249832850456878
+/home/camel/Documents/URMP_audio_processing/URMP/13_Hark_vn_vn_va/AuSep_1_vn_13_Hark.wav,[],0.0
+/home/camel/Documents/URMP_audio_processing/URMP/13_Hark_vn_vn_va/AuSep_3_va_13_Hark.wav,[],0.0
+/home/camel/Documents/URMP_audio_processing/URMP/13_Hark_vn_vn_va/AuSep_2_vn_13_Hark.wav,[],0.0
+/home/camel/Documents/URMP_audio_processing/URMP/41_Miserere_fl_fl_ob_sax_bn/AuSep_1_fl_41_Miserere.wav,[],0.0
+/home/camel/Documents/URMP_audio_processing/URMP/41_Miserere_fl_fl_ob_sax_bn/AuSep_5_bn_41_Miserere.wav,[],0.0
+/home/camel/Documents/URMP_audio_processing/URMP/41_Miserere_fl_fl_ob_sax_bn/AuSep_3_ob_41_Miserere.wav,"[(13.188934240362812, 18.204444444444444)]",0.1255813953488372
+/home/camel/Documents/URMP_audio_processing/URMP/41_Miserere_fl_fl_ob_sax_bn/AuSep_4_sax_41_Miserere.wav,"[(14.257052154195012, 17.322086167800453)]",0.07674418604651159
+/home/camel/Documents/URMP_audio_processing/URMP/41_Miserere_fl_fl_ob_sax_bn/AuSep_2_fl_41_Miserere.wav,"[(20.805079365079365, 26.726167800453513)]",0.14825581395348833
+/home/camel/Documents/URMP_audio_processing/URMP/18_Nocturne_vn_fl_tpt/AuSep_3_tpt_18_Nocturne.wav,"[(56.86566893424036, 60.02358276643991)]",0.03302574065080137
+/home/camel/Documents/URMP_audio_processing/URMP/18_Nocturne_vn_fl_tpt/AuSep_1_vn_18_Nocturne.wav,[],0.0
+/home/camel/Documents/URMP_audio_processing/URMP/18_Nocturne_vn_fl_tpt/AuSep_2_fl_18_Nocturne.wav,[],0.0
+/home/camel/Documents/URMP_audio_processing/URMP/19_Pavane_cl_vn_vc/AuSep_2_vn_19_Pavane.wav,"[(0.0, 3.297233560090703), (7.569705215419501, 12.979954648526077), (27.678185941043083, 30.998639455782314), (87.81786848072562, 91.5330612244898)]",0.11805676475709564
+/home/camel/Documents/URMP_audio_processing/URMP/19_Pavane_cl_vn_vc/AuSep_1_cl_19_Pavane.wav,"[(0.0, 6.408707482993197), (15.255510204081633, 20.317460317460316), (26.63328798185941, 31.2540589569161)]",0.12066864008358003
+/home/camel/Documents/URMP_audio_processing/URMP/19_Pavane_cl_vn_vc/AuSep_3_vc_19_Pavane.wav,"[(0.0, 6.292607709750567), (15.789569160997733, 19.52798185941043), (53.823854875283445, 59.23410430839002), (59.37342403628118, 63.52979591836735), (120.81342403628118, 124.01777777777778)]",0.1709907713738465
+/home/camel/Documents/URMP_audio_processing/URMP/21_Rejouissance_cl_tbn_tba/AuSep_1_cl_21_Rejouissance.wav,[],0.0
+/home/camel/Documents/URMP_audio_processing/URMP/21_Rejouissance_cl_tbn_tba/AuSep_2_tbn_21_Rejouissance.wav,"[(0.0, 3.5294331065759637)]",0.046568627450980386
+/home/camel/Documents/URMP_audio_processing/URMP/21_Rejouissance_cl_tbn_tba/AuSep_3_tba_21_Rejouissance.wav,"[(0.0, 3.5294331065759637)]",0.046568627450980386
+/home/camel/Documents/URMP_audio_processing/URMP/15_Surprise_tpt_tpt_tbn/AuSep_3_tbn_15_Surprise.wav,"[(0.0, 4.272471655328798)]",0.08056042031523641
+/home/camel/Documents/URMP_audio_processing/URMP/15_Surprise_tpt_tpt_tbn/AuSep_1_tpt_15_Surprise.wav,"[(0.0, 4.342131519274377)]",0.0818739054290718
+/home/camel/Documents/URMP_audio_processing/URMP/15_Surprise_tpt_tpt_tbn/AuSep_2_tpt_15_Surprise.wav,"[(0.0, 4.667210884353741)]",0.08800350262697022

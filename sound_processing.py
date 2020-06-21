@@ -5,10 +5,8 @@ import cv2
 import os
 import math
 
+
 x, sr = librosa.load('URMP/01_Jupiter_vn_vc/AuSep_1_vn_01_Jupiter.wav')
-print(sr)
-print(x.shape)
-print(librosa.get_duration(x, sr))
 
 def visualize_rms(x, sr, hop_length, frame_length):
     # figure size
@@ -24,7 +22,7 @@ def visualize_rms(x, sr, hop_length, frame_length):
                             frame_length=frame_length, 
                             hop_length=hop_length, 
                             center=True)
-    print(rms.shape)
+    #print(rms.shape)
     rms = rms[0]
 
     # scale from frames to time
@@ -48,29 +46,36 @@ def find_silences(x, sr, hop_length, frame_length, threshold):
                             frame_length=frame_length, 
                             hop_length=hop_length, 
                             center=True) 
-    print(rms)
+    #print(rms)
     rms = rms[0]
-    print(type(rms))
+    #print(type(rms))
     # scale from frames to time
     frames = range(len(rms))
-    plt.subplot(2, 1, 2)
+
     t = librosa.frames_to_time(frames, 
                             sr=sr, 
                             hop_length=hop_length)
-    print(rms.size)
-    print(t.size)
+    #print(rms.size)
+    #print(t.size)
     start_idx = 0
+    total_silence = 0
+    silence_started = False
     for idx in range(rms.size):
         if rms[idx] < threshold:
-            continue
+            if silence_started: 
+                continue
+            else:
+                silence_started = True
+                start_idx = idx
         else:
-            if t[idx] - t[start_idx] > 1:
-                print("Found a silence")
+            if t[idx] - t[start_idx] > 3 and silence_started:
+                total_silence = total_silence + (t[idx] - t[start_idx])
                 silences.append((t[start_idx], t[idx]))
-        
-            start_idx = idx
-    print("Silences", silences)
-    return silences
+            silence_started = False
+           
+    #print("Silences ", silences)
+    #print("Total silence percent ", total_silence/t[-1])
+    return ( silences, total_silence/t[-1] ) 
 
 def play_video(file_name, silences): 
     cap = cv2.VideoCapture(file_name)
@@ -119,7 +124,7 @@ def play_video(file_name, silences):
     cap.release()
     cv2.destroyAllWindows()
 
-silences = find_silences(x, sr, hop_length=512, frame_length=2048, threshold=0.02)
-#pip visualize_rms(x, sr, hop_length=512, frame_length=2048)
-file_name = 'URMP/01_Jupiter_vn_vc/Vid_01_Jupiter_vn_vc.mp4'
-play_video(file_name, silences)
+
+#visualize_rms(x, sr, hop_length=512, frame_length=2048)
+#file_name = 'URMP/01_Jupiter_vn_vc/Vid_01_Jupiter_vn_vc.mp4'
+#play_video(file_name, silences)
