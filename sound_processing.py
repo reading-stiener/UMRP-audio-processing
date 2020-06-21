@@ -6,7 +6,7 @@ import os
 import math
 
 
-x, sr = librosa.load('URMP/01_Jupiter_vn_vc/AuSep_1_vn_01_Jupiter.wav')
+#x, sr = librosa.load('URMP/01_Jupiter_vn_vc/AuSep_1_vn_01_Jupiter.wav')
 
 def visualize_rms(x, sr, hop_length, frame_length):
     # figure size
