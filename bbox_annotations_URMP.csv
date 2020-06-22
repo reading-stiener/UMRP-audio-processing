@@ -1,41 +1,133 @@
-img_path,mean_annotation
-URMP_JSON/Fugue_Vn. Vn. Va. Vc/Fugue_Vn. Vn. Va. Vc.0.jpg,"[{'label': 'violin', 'confidence': 0.7000586510263924, 'topleft': {'x': 144, 'y': 510}, 'bottomright': {'x': 454, 'y': 696}}, {'label': 'violin', 'confidence': 0.6583284457478, 'topleft': {'x': 557, 'y': 521}, 'bottomright': {'x': 867, 'y': 712}}, {'label': 'viola', 'confidence': 0.7770674486803523, 'topleft': {'x': 980, 'y': 529}, 'bottomright': {'x': 1349, 'y': 752}}, {'label': 'cello', 'confidence': 0.839032258064516, 'topleft': {'x': 1487, 'y': 537}, 'bottomright': {'x': 1757, 'y': 850}}]"
-URMP_JSON/March_Tpt. Sax/March_Tpt. Sax.0.jpg,"[{'label': 'saxophone', 'confidence': 0.7141089108910893, 'topleft': {'x': 1096, 'y': 476}, 'bottomright': {'x': 1422, 'y': 844}}, {'label': 'trumpet', 'confidence': 0.7358415841584156, 'topleft': {'x': 478, 'y': 489}, 'bottomright': {'x': 845, 'y': 819}}]"
-URMP_JSON/Rondeau_Fl. Vn. Va. Cl/Rondeau_Fl. Vn. Va. Cl.0.jpg,"[{'label': 'violin', 'confidence': 0.9014960629921256, 'topleft': {'x': 584, 'y': 519}, 'bottomright': {'x': 871, 'y': 707}}, {'label': 'viola', 'confidence': 0.911929133858267, 'topleft': {'x': 1041, 'y': 506}, 'bottomright': {'x': 1306, 'y': 689}}, {'label': 'flute', 'confidence': 0.918661417322834, 'topleft': {'x': 17, 'y': 544}, 'bottomright': {'x': 325, 'y': 736}}, {'label': 'clarinet', 'confidence': 0.8948031496062985, 'topleft': {'x': 1624, 'y': 511}, 'bottomright': {'x': 1862, 'y': 857}}]"
-URMP_JSON/Nocturne_Vn. Fl. Cl/Nocturne_Vn. Fl. Cl.0.jpg,"[{'label': 'violin', 'confidence': 0.6803488372093025, 'topleft': {'x': 278, 'y': 532}, 'bottomright': {'x': 634, 'y': 728}}, {'label': 'flute', 'confidence': 0.9031976744186038, 'topleft': {'x': 775, 'y': 527}, 'bottomright': {'x': 1065, 'y': 846}}, {'label': 'clarinet', 'confidence': 0.8205813953488373, 'topleft': {'x': 1495, 'y': 495}, 'bottomright': {'x': 1815, 'y': 903}}]"
-URMP_JSON/Hark_Vn. Vn. Va/Hark_Vn. Vn. Va.0.jpg,"[{'label': 'violin', 'confidence': 0.804235294117647, 'topleft': {'x': 286, 'y': 509}, 'bottomright': {'x': 642, 'y': 707}}, {'label': 'violin', 'confidence': 0.568235294117647, 'topleft': {'x': 825, 'y': 493}, 'bottomright': {'x': 1203, 'y': 707}}, {'label': 'viola', 'confidence': 0.7414117647058825, 'topleft': {'x': 1341, 'y': 502}, 'bottomright': {'x': 1889, 'y': 742}}]"
-URMP_JSON/Fugue_Fl. Ob. Cl. Bn/Fugue_Fl. Ob. Cl. Bn.0.jpg,"[{'label': 'flute', 'confidence': 0.8305187319884726, 'topleft': {'x': 27, 'y': 509}, 'bottomright': {'x': 292, 'y': 742}}, {'label': 'oboe', 'confidence': 0.804092219020174, 'topleft': {'x': 618, 'y': 542}, 'bottomright': {'x': 899, 'y': 803}}, {'label': 'clarinet', 'confidence': 0.7546685878962538, 'topleft': {'x': 1079, 'y': 551}, 'bottomright': {'x': 1314, 'y': 811}}, {'label': 'bassoon', 'confidence': 0.813227665706052, 'topleft': {'x': 1431, 'y': 464}, 'bottomright': {'x': 1884, 'y': 846}}]"
-URMP_JSON/Fugue_Fl. Fl. Ob. Cl/Fugue_Fl. Fl. Ob. Cl.0.jpg,"[{'label': 'flute', 'confidence': 0.7059411764705874, 'topleft': {'x': 25, 'y': 504}, 'bottomright': {'x': 337, 'y': 752}}, {'label': 'flute', 'confidence': 0.9387941176470577, 'topleft': {'x': 574, 'y': 549}, 'bottomright': {'x': 821, 'y': 795}}, {'label': 'oboe', 'confidence': 0.9542941176470566, 'topleft': {'x': 1125, 'y': 536}, 'bottomright': {'x': 1272, 'y': 844}}, {'label': 'clarinet', 'confidence': 0.749176470588236, 'topleft': {'x': 1560, 'y': 525}, 'bottomright': {'x': 1819, 'y': 824}}]"
-URMP_JSON/Fugue_Tpt. Tpt. Hn. Tbn/Fugue_Tpt. Tpt. Hn. Tbn.0.jpg,"[{'label': 'trumpet', 'confidence': 0.7521715328467155, 'topleft': {'x': 164, 'y': 557}, 'bottomright': {'x': 503, 'y': 801}}, {'label': 'trumpet', 'confidence': 0.7808576642335765, 'topleft': {'x': 640, 'y': 554}, 'bottomright': {'x': 981, 'y': 833}}, {'label': 'horn', 'confidence': 0.7269708029197083, 'topleft': {'x': 1005, 'y': 481}, 'bottomright': {'x': 1343, 'y': 869}}, {'label': 'trombone', 'confidence': 0.8963503649635031, 'topleft': {'x': 1527, 'y': 498}, 'bottomright': {'x': 1856, 'y': 857}}]"
-URMP_JSON/K515_Vn. Vn. Va. Va. Vc/K515_Vn. Vn. Va. Va. Vc.0.jpg,"[{'label': 'violin', 'confidence': 0.824062499999999, 'topleft': {'x': 448, 'y': 568}, 'bottomright': {'x': 683, 'y': 748}}, {'label': 'violin', 'confidence': 0.8980133928571423, 'topleft': {'x': 82, 'y': 635}, 'bottomright': {'x': 381, 'y': 801}}, {'label': 'viola', 'confidence': 0.9841741071428629, 'topleft': {'x': 830, 'y': 611}, 'bottomright': {'x': 1010, 'y': 748}}, {'label': 'viola', 'confidence': 0.7562499999999998, 'topleft': {'x': 1116, 'y': 629}, 'bottomright': {'x': 1453, 'y': 798}}, {'label': 'cello', 'confidence': 0.9062276785714287, 'topleft': {'x': 1564, 'y': 608}, 'bottomright': {'x': 1788, 'y': 870}}]"
-URMP_JSON/Pavane_Tpt. Vn. Vc/Pavane_Tpt. Vn. Vc.0.jpg,"[{'label': 'violin', 'confidence': 0.7122137404580148, 'topleft': {'x': 798, 'y': 494}, 'bottomright': {'x': 1241, 'y': 712}}, {'label': 'cello', 'confidence': 0.8243511450381683, 'topleft': {'x': 1438, 'y': 511}, 'bottomright': {'x': 1720, 'y': 867}}, {'label': 'trumpet', 'confidence': 0.9079389312977084, 'topleft': {'x': 193, 'y': 508}, 'bottomright': {'x': 501, 'y': 880}}]"
-URMP_JSON/Nocturne_Vn. Fl. Tpt/Nocturne_Vn. Fl. Tpt.0.jpg,"[{'label': 'violin', 'confidence': 0.7921052631578949, 'topleft': {'x': 275, 'y': 526}, 'bottomright': {'x': 667, 'y': 732}}, {'label': 'flute', 'confidence': 0.8032631578947362, 'topleft': {'x': 700, 'y': 478}, 'bottomright': {'x': 1098, 'y': 757}}, {'label': 'trumpet', 'confidence': 0.9653684210526309, 'topleft': {'x': 1252, 'y': 459}, 'bottomright': {'x': 1914, 'y': 847}}]"
-URMP_JSON/Miserere_Fl. Fl. Ob. Cl. Bn/Miserere_Fl. Fl. Ob. Cl. Bn.0.jpg,"[{'label': 'flute', 'confidence': 0.9156578947368423, 'topleft': {'x': 50, 'y': 600}, 'bottomright': {'x': 291, 'y': 765}}, {'label': 'flute', 'confidence': 0.9377631578947366, 'topleft': {'x': 454, 'y': 620}, 'bottomright': {'x': 677, 'y': 783}}, {'label': 'oboe', 'confidence': 0.6971052631578948, 'topleft': {'x': 903, 'y': 599}, 'bottomright': {'x': 1105, 'y': 834}}, {'label': 'clarinet', 'confidence': 0.6288157894736847, 'topleft': {'x': 1271, 'y': 615}, 'bottomright': {'x': 1465, 'y': 856}}, {'label': 'bassoon', 'confidence': 0.7153947368421055, 'topleft': {'x': 1537, 'y': 520}, 'bottomright': {'x': 1855, 'y': 842}}]"
-URMP_JSON/Waltz_Fl. Fl. Cl/Waltz_Fl. Fl. Cl.0.jpg,"[{'label': 'flute', 'confidence': 0.8681521739130433, 'topleft': {'x': 94, 'y': 504}, 'bottomright': {'x': 474, 'y': 782}}, {'label': 'flute', 'confidence': 0.9184782608695652, 'topleft': {'x': 788, 'y': 519}, 'bottomright': {'x': 1126, 'y': 771}}, {'label': 'clarinet', 'confidence': 0.7153804347826089, 'topleft': {'x': 1530, 'y': 503}, 'bottomright': {'x': 1865, 'y': 895}}]"
-URMP_JSON/Rejouissance_Cl. Tbn. Tba/Rejouissance_Cl. Tbn. Tba.0.jpg,"[{'label': 'clarinet', 'confidence': 0.6141111111111109, 'topleft': {'x': 252, 'y': 526}, 'bottomright': {'x': 490, 'y': 819}}, {'label': 'trombone', 'confidence': 0.8117777777777774, 'topleft': {'x': 916, 'y': 466}, 'bottomright': {'x': 1283, 'y': 902}}, {'label': 'tuba', 'confidence': 0.9420000000000006, 'topleft': {'x': 1502, 'y': 402}, 'bottomright': {'x': 1825, 'y': 906}}]"
-URMP_JSON/Elise_Tpt. Tpt. Hn. Tbn/Elise_Tpt. Tpt. Hn. Tbn.0.jpg,"[{'label': 'trumpet', 'confidence': 0.7521715328467155, 'topleft': {'x': 164, 'y': 557}, 'bottomright': {'x': 503, 'y': 801}}, {'label': 'trumpet', 'confidence': 0.7808576642335765, 'topleft': {'x': 640, 'y': 554}, 'bottomright': {'x': 981, 'y': 833}}, {'label': 'horn', 'confidence': 0.7269708029197083, 'topleft': {'x': 1005, 'y': 481}, 'bottomright': {'x': 1343, 'y': 869}}, {'label': 'trombone', 'confidence': 0.8963503649635031, 'topleft': {'x': 1527, 'y': 498}, 'bottomright': {'x': 1856, 'y': 857}}]"
-URMP_JSON/Surprise_Tpt. Tpt. Tbn/Surprise_Tpt. Tpt. Tbn.0.jpg,"[{'label': 'trumpet', 'confidence': 0.8046153846153844, 'topleft': {'x': 817, 'y': 504}, 'bottomright': {'x': 1192, 'y': 790}}, {'label': 'trumpet', 'confidence': 0.8749999999999998, 'topleft': {'x': 221, 'y': 502}, 'bottomright': {'x': 530, 'y': 867}}, {'label': 'trombone', 'confidence': 0.7651923076923084, 'topleft': {'x': 1485, 'y': 508}, 'bottomright': {'x': 1861, 'y': 856}}]"
-URMP_JSON/Surprise_Tpt. Tpt. Sax/Surprise_Tpt. Tpt. Sax.0.jpg,"[{'label': 'saxophone', 'confidence': 0.8655769230769228, 'topleft': {'x': 1427, 'y': 492}, 'bottomright': {'x': 1737, 'y': 862}}, {'label': 'trumpet', 'confidence': 0.8464423076923074, 'topleft': {'x': 782, 'y': 510}, 'bottomright': {'x': 1147, 'y': 769}}, {'label': 'trumpet', 'confidence': 0.8499999999999995, 'topleft': {'x': 173, 'y': 505}, 'bottomright': {'x': 491, 'y': 858}}]"
-URMP_JSON/GString_Tpt. Tbn/GString_Tpt. Tbn.0.jpg,"[{'label': 'trumpet', 'confidence': 0.8095505617977532, 'topleft': {'x': 517, 'y': 508}, 'bottomright': {'x': 832, 'y': 826}}, {'label': 'trombone', 'confidence': 0.9167228464419467, 'topleft': {'x': 1230, 'y': 468}, 'bottomright': {'x': 1652, 'y': 868}}]"
-URMP_JSON/Rejouissance_Sax. Tbn. Tba/Rejouissance_Sax. Tbn. Tba.0.jpg,"[{'label': 'saxophone', 'confidence': 0.7668707482993198, 'topleft': {'x': 242, 'y': 403}, 'bottomright': {'x': 491, 'y': 903}}, {'label': 'trombone', 'confidence': 0.6641496598639457, 'topleft': {'x': 860, 'y': 478}, 'bottomright': {'x': 1261, 'y': 871}}, {'label': 'tuba', 'confidence': 0.9217687074829949, 'topleft': {'x': 1304, 'y': 400}, 'bottomright': {'x': 1889, 'y': 891}}]"
-URMP_JSON/Entertainer_Sax. Sax/Entertainer_Sax. Sax.0.jpg,"[{'label': 'saxophone', 'confidence': 0.7586407766990294, 'topleft': {'x': 504, 'y': 465}, 'bottomright': {'x': 779, 'y': 850}}, {'label': 'saxophone', 'confidence': 0.5654368932038838, 'topleft': {'x': 1181, 'y': 442}, 'bottomright': {'x': 1476, 'y': 843}}]"
-URMP_JSON/Sonata_Vn. Vn/Sonata_Vn. Vn.0.jpg,"[{'label': 'violin', 'confidence': 0.7642222222222224, 'topleft': {'x': 495, 'y': 435}, 'bottomright': {'x': 887, 'y': 683}}, {'label': 'violin', 'confidence': 0.7984444444444443, 'topleft': {'x': 1225, 'y': 524}, 'bottomright': {'x': 1597, 'y': 715}}]"
-URMP_JSON/King_Vn. Vn. Va. Vc/King_Vn. Vn. Va. Vc.0.jpg,"[{'label': 'violin', 'confidence': 0.9033333333333324, 'topleft': {'x': 115, 'y': 543}, 'bottomright': {'x': 440, 'y': 746}}, {'label': 'violin', 'confidence': 0.8374404761904763, 'topleft': {'x': 551, 'y': 559}, 'bottomright': {'x': 868, 'y': 713}}, {'label': 'viola', 'confidence': 0.795714285714286, 'topleft': {'x': 1015, 'y': 589}, 'bottomright': {'x': 1320, 'y': 764}}, {'label': 'cello', 'confidence': 0.9242261904761906, 'topleft': {'x': 1483, 'y': 528}, 'bottomright': {'x': 1746, 'y': 842}}]"
-URMP_JSON/Pirates_Vn. Vn. Va. Vc/Pirates_Vn. Vn. Va. Vc.0.jpg,"[{'label': 'violin', 'confidence': 0.8417307692307694, 'topleft': {'x': 116, 'y': 522}, 'bottomright': {'x': 446, 'y': 749}}, {'label': 'violin', 'confidence': 0.9334615384615383, 'topleft': {'x': 584, 'y': 516}, 'bottomright': {'x': 920, 'y': 728}}, {'label': 'viola', 'confidence': 0.5721153846153846, 'topleft': {'x': 1024, 'y': 542}, 'bottomright': {'x': 1371, 'y': 777}}, {'label': 'cello', 'confidence': 0.9130769230769233, 'topleft': {'x': 1490, 'y': 510}, 'bottomright': {'x': 1738, 'y': 859}}]"
-URMP_JSON/Pirates_Vn. Vn. Va. Sax/Pirates_Vn. Vn. Va. Sax.0.jpg,"[{'label': 'violin', 'confidence': 0.7638775510204083, 'topleft': {'x': 170, 'y': 523}, 'bottomright': {'x': 491, 'y': 724}}, {'label': 'violin', 'confidence': 0.8964285714285715, 'topleft': {'x': 630, 'y': 525}, 'bottomright': {'x': 949, 'y': 707}}, {'label': 'viola', 'confidence': 0.8128571428571432, 'topleft': {'x': 1058, 'y': 534}, 'bottomright': {'x': 1483, 'y': 764}}, {'label': 'saxophone', 'confidence': 0.9259183673469391, 'topleft': {'x': 1680, 'y': 478}, 'bottomright': {'x': 1892, 'y': 884}}]"
-URMP_JSON/Jupiter_Vn. Vc/Jupiter_Vn. Vc.0.jpg,"[{'label': 'violin', 'confidence': 0.7333333333333334, 'topleft': {'x': 489, 'y': 507}, 'bottomright': {'x': 861, 'y': 731}}, {'label': 'cello', 'confidence': 0.8424390243902439, 'topleft': {'x': 1142, 'y': 510}, 'bottomright': {'x': 1477, 'y': 865}}]"
-URMP_JSON/Rondeau_Vn. Vn. Va. Vc/Rondeau_Vn. Vn. Va. Vc.0.jpg,"[{'label': 'violin', 'confidence': 0.9044378698224856, 'topleft': {'x': 128, 'y': 503}, 'bottomright': {'x': 445, 'y': 670}}, {'label': 'violin', 'confidence': 0.7905917159763308, 'topleft': {'x': 622, 'y': 535}, 'bottomright': {'x': 859, 'y': 720}}, {'label': 'viola', 'confidence': 0.9214792899408292, 'topleft': {'x': 1015, 'y': 525}, 'bottomright': {'x': 1274, 'y': 698}}, {'label': 'cello', 'confidence': 0.6126035502958583, 'topleft': {'x': 1419, 'y': 489}, 'bottomright': {'x': 1871, 'y': 848}}]"
-URMP_JSON/Rejouissance_Cl. Sax. Tba/Rejouissance_Cl. Sax. Tba.0.jpg,"[{'label': 'clarinet', 'confidence': 0.9048666666666672, 'topleft': {'x': 422, 'y': 485}, 'bottomright': {'x': 713, 'y': 885}}, {'label': 'saxophone', 'confidence': 0.9542666666666656, 'topleft': {'x': 897, 'y': 386}, 'bottomright': {'x': 1081, 'y': 878}}, {'label': 'tuba', 'confidence': 0.9258000000000007, 'topleft': {'x': 1485, 'y': 408}, 'bottomright': {'x': 1813, 'y': 886}}]"
-URMP_JSON/Allegro_Fl. Fl/Allegro_Fl. Fl.0.jpg,"[{'label': 'flute', 'confidence': 0.9040705128205122, 'topleft': {'x': 352, 'y': 489}, 'bottomright': {'x': 731, 'y': 755}}, {'label': 'flute', 'confidence': 0.8345833333333331, 'topleft': {'x': 1073, 'y': 520}, 'bottomright': {'x': 1376, 'y': 834}}]"
-URMP_JSON/Dance_Fl. Cl/Dance_Fl. Cl.0.jpg,"[{'label': 'flute', 'confidence': 0.8682812500000009, 'topleft': {'x': 365, 'y': 478}, 'bottomright': {'x': 751, 'y': 807}}, {'label': 'clarinet', 'confidence': 0.80015625, 'topleft': {'x': 1222, 'y': 477}, 'bottomright': {'x': 1547, 'y': 837}}]"
-URMP_JSON/Spring_Fl. Vn/Spring_Fl. Vn.0.jpg,"[{'label': 'violin', 'confidence': 0.787205882352941, 'topleft': {'x': 1179, 'y': 526}, 'bottomright': {'x': 1556, 'y': 726}}, {'label': 'flute', 'confidence': 0.8560294117647063, 'topleft': {'x': 310, 'y': 509}, 'bottomright': {'x': 749, 'y': 833}}]"
-URMP_JSON/Entertainer_Tpt. Tpt/Entertainer_Tpt. Tpt.0.jpg,"[{'label': 'trumpet', 'confidence': 0.8039766081871345, 'topleft': {'x': 512, 'y': 528}, 'bottomright': {'x': 765, 'y': 781}}, {'label': 'trumpet', 'confidence': 0.8017543859649121, 'topleft': {'x': 1247, 'y': 529}, 'bottomright': {'x': 1550, 'y': 781}}]"
-URMP_JSON/Arioso_Tpt. Tpt. Hn. Tbn. Tba/Arioso_Tpt. Tpt. Hn. Tbn. Tba.0.jpg,"[{'label': 'trumpet', 'confidence': 0.8948228346456675, 'topleft': {'x': 139, 'y': 630}, 'bottomright': {'x': 341, 'y': 846}}, {'label': 'trumpet', 'confidence': 0.9395866141732283, 'topleft': {'x': 495, 'y': 610}, 'bottomright': {'x': 754, 'y': 827}}, {'label': 'horn', 'confidence': 0.9353937007873998, 'topleft': {'x': 839, 'y': 562}, 'bottomright': {'x': 1066, 'y': 873}}, {'label': 'trombone', 'confidence': 0.9365551181102367, 'topleft': {'x': 1235, 'y': 579}, 'bottomright': {'x': 1477, 'y': 887}}, {'label': 'tuba', 'confidence': 0.7529921259842525, 'topleft': {'x': 1573, 'y': 487}, 'bottomright': {'x': 1865, 'y': 877}}]"
-URMP_JSON/Jesus_Tpt. Vn/Jesus_Tpt. Vn.0.jpg,"[{'label': 'violin', 'confidence': 0.7139393939393938, 'topleft': {'x': 1173, 'y': 513}, 'bottomright': {'x': 1561, 'y': 722}}, {'label': 'trumpet', 'confidence': 0.7007070707070711, 'topleft': {'x': 529, 'y': 510}, 'bottomright': {'x': 837, 'y': 821}}]"
-URMP_JSON/Fugue_Fl. Fl. Ob. Sax/Fugue_Fl. Fl. Ob. Sax.0.jpg,"[{'label': 'flute', 'confidence': 0.7106824925816015, 'topleft': {'x': 25, 'y': 505}, 'bottomright': {'x': 337, 'y': 752}}, {'label': 'flute', 'confidence': 0.9228486646884279, 'topleft': {'x': 575, 'y': 548}, 'bottomright': {'x': 804, 'y': 795}}, {'label': 'oboe', 'confidence': 0.6798516320474762, 'topleft': {'x': 1130, 'y': 522}, 'bottomright': {'x': 1405, 'y': 818}}, {'label': 'saxophone', 'confidence': 0.8176261127596447, 'topleft': {'x': 1617, 'y': 507}, 'bottomright': {'x': 1841, 'y': 862}}]"
-URMP_JSON/Jerusalem_Vn. Vn. Va. Sax. Db/Jerusalem_Vn. Vn. Va. Sax. Db.0.jpg,"[{'label': 'violin', 'confidence': 0.8045374449339213, 'topleft': {'x': 116, 'y': 636}, 'bottomright': {'x': 422, 'y': 778}}, {'label': 'violin', 'confidence': 0.8925110132158588, 'topleft': {'x': 475, 'y': 599}, 'bottomright': {'x': 675, 'y': 744}}, {'label': 'viola', 'confidence': 0.8923348017621142, 'topleft': {'x': 835, 'y': 599}, 'bottomright': {'x': 1071, 'y': 757}}, {'label': 'double_bass', 'confidence': 0.8831718061674, 'topleft': {'x': 1557, 'y': 572}, 'bottomright': {'x': 1831, 'y': 858}}, {'label': 'saxophone', 'confidence': 0.6552863436123345, 'topleft': {'x': 1202, 'y': 557}, 'bottomright': {'x': 1425, 'y': 866}}]"
-URMP_JSON/King_Vn. Vn. Va. Sax/King_Vn. Vn. Va. Sax.0.jpg,"[{'label': 'violin', 'confidence': 0.8955696202531642, 'topleft': {'x': 117, 'y': 538}, 'bottomright': {'x': 443, 'y': 739}}, {'label': 'violin', 'confidence': 0.8011392405063288, 'topleft': {'x': 554, 'y': 549}, 'bottomright': {'x': 878, 'y': 715}}, {'label': 'viola', 'confidence': 0.6999367088607592, 'topleft': {'x': 1016, 'y': 568}, 'bottomright': {'x': 1364, 'y': 778}}, {'label': 'saxophone', 'confidence': 0.8766455696202531, 'topleft': {'x': 1500, 'y': 492}, 'bottomright': {'x': 1815, 'y': 858}}]"
-URMP_JSON/Slavonic_Tpt. Tpt. Hn. Tbn/Slavonic_Tpt. Tpt. Hn. Tbn.0.jpg,"[{'label': 'trumpet', 'confidence': 0.7521715328467155, 'topleft': {'x': 164, 'y': 557}, 'bottomright': {'x': 503, 'y': 801}}, {'label': 'trumpet', 'confidence': 0.7808576642335765, 'topleft': {'x': 640, 'y': 554}, 'bottomright': {'x': 981, 'y': 833}}, {'label': 'horn', 'confidence': 0.7269708029197083, 'topleft': {'x': 1005, 'y': 481}, 'bottomright': {'x': 1343, 'y': 869}}, {'label': 'trombone', 'confidence': 0.8963503649635031, 'topleft': {'x': 1527, 'y': 498}, 'bottomright': {'x': 1856, 'y': 857}}]"
-URMP_JSON/Maria_Ob. Vc/Maria_Ob. Vc.0.jpg,"[{'label': 'cello', 'confidence': 0.9573529411764699, 'topleft': {'x': 1231, 'y': 555}, 'bottomright': {'x': 1439, 'y': 854}}, {'label': 'oboe', 'confidence': 0.8110294117647067, 'topleft': {'x': 538, 'y': 516}, 'bottomright': {'x': 848, 'y': 816}}]"
-URMP_JSON/Jerusalem_Vn. Vn. Va. Vc. Db/Jerusalem_Vn. Vn. Va. Vc. Db.0.jpg,"[{'label': 'violin', 'confidence': 0.8546629213483145, 'topleft': {'x': 135, 'y': 643}, 'bottomright': {'x': 411, 'y': 782}}, {'label': 'violin', 'confidence': 0.643426966292135, 'topleft': {'x': 495, 'y': 588}, 'bottomright': {'x': 688, 'y': 755}}, {'label': 'viola', 'confidence': 0.9005617977528094, 'topleft': {'x': 836, 'y': 601}, 'bottomright': {'x': 1072, 'y': 769}}, {'label': 'cello', 'confidence': 0.7080337078651686, 'topleft': {'x': 1170, 'y': 613}, 'bottomright': {'x': 1416, 'y': 898}}, {'label': 'double_bass', 'confidence': 0.8816292134831453, 'topleft': {'x': 1577, 'y': 561}, 'bottomright': {'x': 1876, 'y': 861}}]"
-URMP_JSON/Spring_Vn. Vn. Vc/Spring_Vn. Vn. Vc.0.jpg,"[{'label': 'violin', 'confidence': 0.7956538461538463, 'topleft': {'x': 274, 'y': 527}, 'bottomright': {'x': 657, 'y': 678}}, {'label': 'violin', 'confidence': 0.7498076923076918, 'topleft': {'x': 799, 'y': 499}, 'bottomright': {'x': 1177, 'y': 704}}, {'label': 'cello', 'confidence': 0.9287307692307688, 'topleft': {'x': 1396, 'y': 498}, 'bottomright': {'x': 1648, 'y': 866}}]"
+img_path,label,topleft_x,topleft_y,bottomright_x,bottomright_y,confidence
+URMP_JSON/Fugue_Vn. Vn. Va. Vc/Fugue_Vn. Vn. Va. Vc.0.jpg,violin,144,510,454,696,0.7000586510263924
+URMP_JSON/Fugue_Vn. Vn. Va. Vc/Fugue_Vn. Vn. Va. Vc.0.jpg,violin,557,521,867,712,0.6583284457478
+URMP_JSON/Fugue_Vn. Vn. Va. Vc/Fugue_Vn. Vn. Va. Vc.0.jpg,viola,980,529,1349,752,0.7770674486803523
+URMP_JSON/Fugue_Vn. Vn. Va. Vc/Fugue_Vn. Vn. Va. Vc.0.jpg,cello,1487,537,1757,850,0.839032258064516
+URMP_JSON/March_Tpt. Sax/March_Tpt. Sax.0.jpg,saxophone,1096,476,1422,844,0.7141089108910893
+URMP_JSON/March_Tpt. Sax/March_Tpt. Sax.0.jpg,trumpet,478,489,845,819,0.7358415841584156
+URMP_JSON/Rondeau_Fl. Vn. Va. Cl/Rondeau_Fl. Vn. Va. Cl.0.jpg,violin,584,519,871,707,0.9014960629921256
+URMP_JSON/Rondeau_Fl. Vn. Va. Cl/Rondeau_Fl. Vn. Va. Cl.0.jpg,viola,1041,506,1306,689,0.911929133858267
+URMP_JSON/Rondeau_Fl. Vn. Va. Cl/Rondeau_Fl. Vn. Va. Cl.0.jpg,flute,17,544,325,736,0.918661417322834
+URMP_JSON/Rondeau_Fl. Vn. Va. Cl/Rondeau_Fl. Vn. Va. Cl.0.jpg,clarinet,1624,511,1862,857,0.8948031496062985
+URMP_JSON/Nocturne_Vn. Fl. Cl/Nocturne_Vn. Fl. Cl.0.jpg,violin,278,532,634,728,0.6803488372093025
+URMP_JSON/Nocturne_Vn. Fl. Cl/Nocturne_Vn. Fl. Cl.0.jpg,flute,775,527,1065,846,0.9031976744186038
+URMP_JSON/Nocturne_Vn. Fl. Cl/Nocturne_Vn. Fl. Cl.0.jpg,clarinet,1495,495,1815,903,0.8205813953488373
+URMP_JSON/Hark_Vn. Vn. Va/Hark_Vn. Vn. Va.0.jpg,violin,286,509,642,707,0.804235294117647
+URMP_JSON/Hark_Vn. Vn. Va/Hark_Vn. Vn. Va.0.jpg,violin,825,493,1203,707,0.568235294117647
+URMP_JSON/Hark_Vn. Vn. Va/Hark_Vn. Vn. Va.0.jpg,viola,1341,502,1889,742,0.7414117647058825
+URMP_JSON/Fugue_Fl. Ob. Cl. Bn/Fugue_Fl. Ob. Cl. Bn.0.jpg,flute,27,509,292,742,0.8305187319884726
+URMP_JSON/Fugue_Fl. Ob. Cl. Bn/Fugue_Fl. Ob. Cl. Bn.0.jpg,oboe,618,542,899,803,0.804092219020174
+URMP_JSON/Fugue_Fl. Ob. Cl. Bn/Fugue_Fl. Ob. Cl. Bn.0.jpg,clarinet,1079,551,1314,811,0.7546685878962538
+URMP_JSON/Fugue_Fl. Ob. Cl. Bn/Fugue_Fl. Ob. Cl. Bn.0.jpg,bassoon,1431,464,1884,846,0.813227665706052
+URMP_JSON/Fugue_Fl. Fl. Ob. Cl/Fugue_Fl. Fl. Ob. Cl.0.jpg,flute,25,504,337,752,0.7059411764705874
+URMP_JSON/Fugue_Fl. Fl. Ob. Cl/Fugue_Fl. Fl. Ob. Cl.0.jpg,flute,574,549,821,795,0.9387941176470577
+URMP_JSON/Fugue_Fl. Fl. Ob. Cl/Fugue_Fl. Fl. Ob. Cl.0.jpg,oboe,1125,536,1272,844,0.9542941176470566
+URMP_JSON/Fugue_Fl. Fl. Ob. Cl/Fugue_Fl. Fl. Ob. Cl.0.jpg,clarinet,1560,525,1819,824,0.749176470588236
+URMP_JSON/Fugue_Tpt. Tpt. Hn. Tbn/Fugue_Tpt. Tpt. Hn. Tbn.0.jpg,trumpet,164,557,503,801,0.7521715328467155
+URMP_JSON/Fugue_Tpt. Tpt. Hn. Tbn/Fugue_Tpt. Tpt. Hn. Tbn.0.jpg,trumpet,640,554,981,833,0.7808576642335765
+URMP_JSON/Fugue_Tpt. Tpt. Hn. Tbn/Fugue_Tpt. Tpt. Hn. Tbn.0.jpg,horn,1005,481,1343,869,0.7269708029197083
+URMP_JSON/Fugue_Tpt. Tpt. Hn. Tbn/Fugue_Tpt. Tpt. Hn. Tbn.0.jpg,trombone,1527,498,1856,857,0.8963503649635031
+URMP_JSON/K515_Vn. Vn. Va. Va. Vc/K515_Vn. Vn. Va. Va. Vc.0.jpg,violin,448,568,683,748,0.824062499999999
+URMP_JSON/K515_Vn. Vn. Va. Va. Vc/K515_Vn. Vn. Va. Va. Vc.0.jpg,violin,82,635,381,801,0.8980133928571423
+URMP_JSON/K515_Vn. Vn. Va. Va. Vc/K515_Vn. Vn. Va. Va. Vc.0.jpg,viola,830,611,1010,748,0.9841741071428629
+URMP_JSON/K515_Vn. Vn. Va. Va. Vc/K515_Vn. Vn. Va. Va. Vc.0.jpg,viola,1116,629,1453,798,0.7562499999999998
+URMP_JSON/K515_Vn. Vn. Va. Va. Vc/K515_Vn. Vn. Va. Va. Vc.0.jpg,cello,1564,608,1788,870,0.9062276785714287
+URMP_JSON/Pavane_Tpt. Vn. Vc/Pavane_Tpt. Vn. Vc.0.jpg,violin,798,494,1241,712,0.7122137404580148
+URMP_JSON/Pavane_Tpt. Vn. Vc/Pavane_Tpt. Vn. Vc.0.jpg,cello,1438,511,1720,867,0.8243511450381683
+URMP_JSON/Pavane_Tpt. Vn. Vc/Pavane_Tpt. Vn. Vc.0.jpg,trumpet,193,508,501,880,0.9079389312977084
+URMP_JSON/Nocturne_Vn. Fl. Tpt/Nocturne_Vn. Fl. Tpt.0.jpg,violin,275,526,667,732,0.7921052631578949
+URMP_JSON/Nocturne_Vn. Fl. Tpt/Nocturne_Vn. Fl. Tpt.0.jpg,flute,700,478,1098,757,0.8032631578947362
+URMP_JSON/Nocturne_Vn. Fl. Tpt/Nocturne_Vn. Fl. Tpt.0.jpg,trumpet,1252,459,1914,847,0.9653684210526309
+URMP_JSON/Miserere_Fl. Fl. Ob. Cl. Bn/Miserere_Fl. Fl. Ob. Cl. Bn.0.jpg,flute,50,600,291,765,0.9156578947368423
+URMP_JSON/Miserere_Fl. Fl. Ob. Cl. Bn/Miserere_Fl. Fl. Ob. Cl. Bn.0.jpg,flute,454,620,677,783,0.9377631578947366
+URMP_JSON/Miserere_Fl. Fl. Ob. Cl. Bn/Miserere_Fl. Fl. Ob. Cl. Bn.0.jpg,oboe,903,599,1105,834,0.6971052631578948
+URMP_JSON/Miserere_Fl. Fl. Ob. Cl. Bn/Miserere_Fl. Fl. Ob. Cl. Bn.0.jpg,clarinet,1271,615,1465,856,0.6288157894736847
+URMP_JSON/Miserere_Fl. Fl. Ob. Cl. Bn/Miserere_Fl. Fl. Ob. Cl. Bn.0.jpg,bassoon,1537,520,1855,842,0.7153947368421055
+URMP_JSON/Waltz_Fl. Fl. Cl/Waltz_Fl. Fl. Cl.0.jpg,flute,94,504,474,782,0.8681521739130433
+URMP_JSON/Waltz_Fl. Fl. Cl/Waltz_Fl. Fl. Cl.0.jpg,flute,788,519,1126,771,0.9184782608695652
+URMP_JSON/Waltz_Fl. Fl. Cl/Waltz_Fl. Fl. Cl.0.jpg,clarinet,1530,503,1865,895,0.7153804347826089
+URMP_JSON/Rejouissance_Cl. Tbn. Tba/Rejouissance_Cl. Tbn. Tba.0.jpg,clarinet,252,526,490,819,0.6141111111111109
+URMP_JSON/Rejouissance_Cl. Tbn. Tba/Rejouissance_Cl. Tbn. Tba.0.jpg,trombone,916,466,1283,902,0.8117777777777774
+URMP_JSON/Rejouissance_Cl. Tbn. Tba/Rejouissance_Cl. Tbn. Tba.0.jpg,tuba,1502,402,1825,906,0.9420000000000006
+URMP_JSON/Elise_Tpt. Tpt. Hn. Tbn/Elise_Tpt. Tpt. Hn. Tbn.0.jpg,trumpet,164,557,503,801,0.7521715328467155
+URMP_JSON/Elise_Tpt. Tpt. Hn. Tbn/Elise_Tpt. Tpt. Hn. Tbn.0.jpg,trumpet,640,554,981,833,0.7808576642335765
+URMP_JSON/Elise_Tpt. Tpt. Hn. Tbn/Elise_Tpt. Tpt. Hn. Tbn.0.jpg,horn,1005,481,1343,869,0.7269708029197083
+URMP_JSON/Elise_Tpt. Tpt. Hn. Tbn/Elise_Tpt. Tpt. Hn. Tbn.0.jpg,trombone,1527,498,1856,857,0.8963503649635031
+URMP_JSON/Surprise_Tpt. Tpt. Tbn/Surprise_Tpt. Tpt. Tbn.0.jpg,trumpet,817,504,1192,790,0.8046153846153844
+URMP_JSON/Surprise_Tpt. Tpt. Tbn/Surprise_Tpt. Tpt. Tbn.0.jpg,trumpet,221,502,530,867,0.8749999999999998
+URMP_JSON/Surprise_Tpt. Tpt. Tbn/Surprise_Tpt. Tpt. Tbn.0.jpg,trombone,1485,508,1861,856,0.7651923076923084
+URMP_JSON/Surprise_Tpt. Tpt. Sax/Surprise_Tpt. Tpt. Sax.0.jpg,saxophone,1427,492,1737,862,0.8655769230769228
+URMP_JSON/Surprise_Tpt. Tpt. Sax/Surprise_Tpt. Tpt. Sax.0.jpg,trumpet,782,510,1147,769,0.8464423076923074
+URMP_JSON/Surprise_Tpt. Tpt. Sax/Surprise_Tpt. Tpt. Sax.0.jpg,trumpet,173,505,491,858,0.8499999999999995
+URMP_JSON/GString_Tpt. Tbn/GString_Tpt. Tbn.0.jpg,trumpet,517,508,832,826,0.8095505617977532
+URMP_JSON/GString_Tpt. Tbn/GString_Tpt. Tbn.0.jpg,trombone,1230,468,1652,868,0.9167228464419467
+URMP_JSON/Rejouissance_Sax. Tbn. Tba/Rejouissance_Sax. Tbn. Tba.0.jpg,saxophone,242,403,491,903,0.7668707482993198
+URMP_JSON/Rejouissance_Sax. Tbn. Tba/Rejouissance_Sax. Tbn. Tba.0.jpg,trombone,860,478,1261,871,0.6641496598639457
+URMP_JSON/Rejouissance_Sax. Tbn. Tba/Rejouissance_Sax. Tbn. Tba.0.jpg,tuba,1304,400,1889,891,0.9217687074829949
+URMP_JSON/Entertainer_Sax. Sax/Entertainer_Sax. Sax.0.jpg,saxophone,504,465,779,850,0.7586407766990294
+URMP_JSON/Entertainer_Sax. Sax/Entertainer_Sax. Sax.0.jpg,saxophone,1181,442,1476,843,0.5654368932038838
+URMP_JSON/Sonata_Vn. Vn/Sonata_Vn. Vn.0.jpg,violin,495,435,887,683,0.7642222222222224
+URMP_JSON/Sonata_Vn. Vn/Sonata_Vn. Vn.0.jpg,violin,1225,524,1597,715,0.7984444444444443
+URMP_JSON/King_Vn. Vn. Va. Vc/King_Vn. Vn. Va. Vc.0.jpg,violin,115,543,440,746,0.9033333333333324
+URMP_JSON/King_Vn. Vn. Va. Vc/King_Vn. Vn. Va. Vc.0.jpg,violin,551,559,868,713,0.8374404761904763
+URMP_JSON/King_Vn. Vn. Va. Vc/King_Vn. Vn. Va. Vc.0.jpg,viola,1015,589,1320,764,0.795714285714286
+URMP_JSON/King_Vn. Vn. Va. Vc/King_Vn. Vn. Va. Vc.0.jpg,cello,1483,528,1746,842,0.9242261904761906
+URMP_JSON/Pirates_Vn. Vn. Va. Vc/Pirates_Vn. Vn. Va. Vc.0.jpg,violin,116,522,446,749,0.8417307692307694
+URMP_JSON/Pirates_Vn. Vn. Va. Vc/Pirates_Vn. Vn. Va. Vc.0.jpg,violin,584,516,920,728,0.9334615384615383
+URMP_JSON/Pirates_Vn. Vn. Va. Vc/Pirates_Vn. Vn. Va. Vc.0.jpg,viola,1024,542,1371,777,0.5721153846153846
+URMP_JSON/Pirates_Vn. Vn. Va. Vc/Pirates_Vn. Vn. Va. Vc.0.jpg,cello,1490,510,1738,859,0.9130769230769233
+URMP_JSON/Pirates_Vn. Vn. Va. Sax/Pirates_Vn. Vn. Va. Sax.0.jpg,violin,170,523,491,724,0.7638775510204083
+URMP_JSON/Pirates_Vn. Vn. Va. Sax/Pirates_Vn. Vn. Va. Sax.0.jpg,violin,630,525,949,707,0.8964285714285715
+URMP_JSON/Pirates_Vn. Vn. Va. Sax/Pirates_Vn. Vn. Va. Sax.0.jpg,viola,1058,534,1483,764,0.8128571428571432
+URMP_JSON/Pirates_Vn. Vn. Va. Sax/Pirates_Vn. Vn. Va. Sax.0.jpg,saxophone,1680,478,1892,884,0.9259183673469391
+URMP_JSON/Jupiter_Vn. Vc/Jupiter_Vn. Vc.0.jpg,violin,489,507,861,731,0.7333333333333334
+URMP_JSON/Jupiter_Vn. Vc/Jupiter_Vn. Vc.0.jpg,cello,1142,510,1477,865,0.8424390243902439
+URMP_JSON/Rondeau_Vn. Vn. Va. Vc/Rondeau_Vn. Vn. Va. Vc.0.jpg,violin,128,503,445,670,0.9044378698224856
+URMP_JSON/Rondeau_Vn. Vn. Va. Vc/Rondeau_Vn. Vn. Va. Vc.0.jpg,violin,622,535,859,720,0.7905917159763308
+URMP_JSON/Rondeau_Vn. Vn. Va. Vc/Rondeau_Vn. Vn. Va. Vc.0.jpg,viola,1015,525,1274,698,0.9214792899408292
+URMP_JSON/Rondeau_Vn. Vn. Va. Vc/Rondeau_Vn. Vn. Va. Vc.0.jpg,cello,1419,489,1871,848,0.6126035502958583
+URMP_JSON/Rejouissance_Cl. Sax. Tba/Rejouissance_Cl. Sax. Tba.0.jpg,clarinet,422,485,713,885,0.9048666666666672
+URMP_JSON/Rejouissance_Cl. Sax. Tba/Rejouissance_Cl. Sax. Tba.0.jpg,saxophone,897,386,1081,878,0.9542666666666656
+URMP_JSON/Rejouissance_Cl. Sax. Tba/Rejouissance_Cl. Sax. Tba.0.jpg,tuba,1485,408,1813,886,0.9258000000000007
+URMP_JSON/Allegro_Fl. Fl/Allegro_Fl. Fl.0.jpg,flute,352,489,731,755,0.9040705128205122
+URMP_JSON/Allegro_Fl. Fl/Allegro_Fl. Fl.0.jpg,flute,1073,520,1376,834,0.8345833333333331
+URMP_JSON/Dance_Fl. Cl/Dance_Fl. Cl.0.jpg,flute,365,478,751,807,0.8682812500000009
+URMP_JSON/Dance_Fl. Cl/Dance_Fl. Cl.0.jpg,clarinet,1222,477,1547,837,0.80015625
+URMP_JSON/Spring_Fl. Vn/Spring_Fl. Vn.0.jpg,violin,1179,526,1556,726,0.787205882352941
+URMP_JSON/Spring_Fl. Vn/Spring_Fl. Vn.0.jpg,flute,310,509,749,833,0.8560294117647063
+URMP_JSON/Entertainer_Tpt. Tpt/Entertainer_Tpt. Tpt.0.jpg,trumpet,512,528,765,781,0.8039766081871345
+URMP_JSON/Entertainer_Tpt. Tpt/Entertainer_Tpt. Tpt.0.jpg,trumpet,1247,529,1550,781,0.8017543859649121
+URMP_JSON/Arioso_Tpt. Tpt. Hn. Tbn. Tba/Arioso_Tpt. Tpt. Hn. Tbn. Tba.0.jpg,trumpet,139,630,341,846,0.8948228346456675
+URMP_JSON/Arioso_Tpt. Tpt. Hn. Tbn. Tba/Arioso_Tpt. Tpt. Hn. Tbn. Tba.0.jpg,trumpet,495,610,754,827,0.9395866141732283
+URMP_JSON/Arioso_Tpt. Tpt. Hn. Tbn. Tba/Arioso_Tpt. Tpt. Hn. Tbn. Tba.0.jpg,horn,839,562,1066,873,0.9353937007873998
+URMP_JSON/Arioso_Tpt. Tpt. Hn. Tbn. Tba/Arioso_Tpt. Tpt. Hn. Tbn. Tba.0.jpg,trombone,1235,579,1477,887,0.9365551181102367
+URMP_JSON/Arioso_Tpt. Tpt. Hn. Tbn. Tba/Arioso_Tpt. Tpt. Hn. Tbn. Tba.0.jpg,tuba,1573,487,1865,877,0.7529921259842525
+URMP_JSON/Jesus_Tpt. Vn/Jesus_Tpt. Vn.0.jpg,violin,1173,513,1561,722,0.7139393939393938
+URMP_JSON/Jesus_Tpt. Vn/Jesus_Tpt. Vn.0.jpg,trumpet,529,510,837,821,0.7007070707070711
+URMP_JSON/Fugue_Fl. Fl. Ob. Sax/Fugue_Fl. Fl. Ob. Sax.0.jpg,flute,25,505,337,752,0.7106824925816015
+URMP_JSON/Fugue_Fl. Fl. Ob. Sax/Fugue_Fl. Fl. Ob. Sax.0.jpg,flute,575,548,804,795,0.9228486646884279
+URMP_JSON/Fugue_Fl. Fl. Ob. Sax/Fugue_Fl. Fl. Ob. Sax.0.jpg,oboe,1130,522,1405,818,0.6798516320474762
+URMP_JSON/Fugue_Fl. Fl. Ob. Sax/Fugue_Fl. Fl. Ob. Sax.0.jpg,saxophone,1617,507,1841,862,0.8176261127596447
+URMP_JSON/Jerusalem_Vn. Vn. Va. Sax. Db/Jerusalem_Vn. Vn. Va. Sax. Db.0.jpg,violin,116,636,422,778,0.8045374449339213
+URMP_JSON/Jerusalem_Vn. Vn. Va. Sax. Db/Jerusalem_Vn. Vn. Va. Sax. Db.0.jpg,violin,475,599,675,744,0.8925110132158588
+URMP_JSON/Jerusalem_Vn. Vn. Va. Sax. Db/Jerusalem_Vn. Vn. Va. Sax. Db.0.jpg,viola,835,599,1071,757,0.8923348017621142
+URMP_JSON/Jerusalem_Vn. Vn. Va. Sax. Db/Jerusalem_Vn. Vn. Va. Sax. Db.0.jpg,double_bass,1557,572,1831,858,0.8831718061674
+URMP_JSON/Jerusalem_Vn. Vn. Va. Sax. Db/Jerusalem_Vn. Vn. Va. Sax. Db.0.jpg,saxophone,1202,557,1425,866,0.6552863436123345
+URMP_JSON/King_Vn. Vn. Va. Sax/King_Vn. Vn. Va. Sax.0.jpg,violin,117,538,443,739,0.8955696202531642
+URMP_JSON/King_Vn. Vn. Va. Sax/King_Vn. Vn. Va. Sax.0.jpg,violin,554,549,878,715,0.8011392405063288
+URMP_JSON/King_Vn. Vn. Va. Sax/King_Vn. Vn. Va. Sax.0.jpg,viola,1016,568,1364,778,0.6999367088607592
+URMP_JSON/King_Vn. Vn. Va. Sax/King_Vn. Vn. Va. Sax.0.jpg,saxophone,1500,492,1815,858,0.8766455696202531
+URMP_JSON/Slavonic_Tpt. Tpt. Hn. Tbn/Slavonic_Tpt. Tpt. Hn. Tbn.0.jpg,trumpet,164,557,503,801,0.7521715328467155
+URMP_JSON/Slavonic_Tpt. Tpt. Hn. Tbn/Slavonic_Tpt. Tpt. Hn. Tbn.0.jpg,trumpet,640,554,981,833,0.7808576642335765
+URMP_JSON/Slavonic_Tpt. Tpt. Hn. Tbn/Slavonic_Tpt. Tpt. Hn. Tbn.0.jpg,horn,1005,481,1343,869,0.7269708029197083
+URMP_JSON/Slavonic_Tpt. Tpt. Hn. Tbn/Slavonic_Tpt. Tpt. Hn. Tbn.0.jpg,trombone,1527,498,1856,857,0.8963503649635031
+URMP_JSON/Maria_Ob. Vc/Maria_Ob. Vc.0.jpg,cello,1231,555,1439,854,0.9573529411764699
+URMP_JSON/Maria_Ob. Vc/Maria_Ob. Vc.0.jpg,oboe,538,516,848,816,0.8110294117647067
+URMP_JSON/Jerusalem_Vn. Vn. Va. Vc. Db/Jerusalem_Vn. Vn. Va. Vc. Db.0.jpg,violin,135,643,411,782,0.8546629213483145
+URMP_JSON/Jerusalem_Vn. Vn. Va. Vc. Db/Jerusalem_Vn. Vn. Va. Vc. Db.0.jpg,violin,495,588,688,755,0.643426966292135
+URMP_JSON/Jerusalem_Vn. Vn. Va. Vc. Db/Jerusalem_Vn. Vn. Va. Vc. Db.0.jpg,viola,836,601,1072,769,0.9005617977528094
+URMP_JSON/Jerusalem_Vn. Vn. Va. Vc. Db/Jerusalem_Vn. Vn. Va. Vc. Db.0.jpg,cello,1170,613,1416,898,0.7080337078651686
+URMP_JSON/Jerusalem_Vn. Vn. Va. Vc. Db/Jerusalem_Vn. Vn. Va. Vc. Db.0.jpg,double_bass,1577,561,1876,861,0.8816292134831453
+URMP_JSON/Spring_Vn. Vn. Vc/Spring_Vn. Vn. Vc.0.jpg,violin,274,527,657,678,0.7956538461538463
+URMP_JSON/Spring_Vn. Vn. Vc/Spring_Vn. Vn. Vc.0.jpg,violin,799,499,1177,704,0.7498076923076918
+URMP_JSON/Spring_Vn. Vn. Vc/Spring_Vn. Vn. Vc.0.jpg,cello,1396,498,1648,866,0.9287307692307688
