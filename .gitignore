@@ -6,3 +6,4 @@ extr_files
 .vscode
 data
 __pycache__
+LSTM_dataset
