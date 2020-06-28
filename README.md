@@ -40,7 +40,7 @@ Currently, you need to install the following dependencies.
 To install the above, execute the following: 
 
 ``` bash 
-    pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 Furthermore, you'll need install ffmpeg from source code to get the project going.
