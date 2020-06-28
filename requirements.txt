@@ -1,0 +1,4 @@
+matplotlib
+librosa
+numpy
+opencv-python
