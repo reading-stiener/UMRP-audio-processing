@@ -73,6 +73,9 @@ def bbox_filepaths(rootdir):
                 # Average annotation
                 mean_annotation = avg_annotations(sum_annotation, valid_count, inst_count)
 
+                # squaring annotation box
+                mean_annotation = squared_annotation(mean_annotation, inst_count)
+
                 if not os.path.exists('mean_annotations'):
                     os.mkdir('mean_annotations')
 
@@ -192,6 +195,34 @@ def avg_annotations(total, count, inst_count):
         total[i]['confidence'] /= count
     return total 
 
+def squared_annotation(avg_annotation, inst_count):
+    """
+    Return a square box annotation given a average annotation
+
+    Parameters
+    ----------
+
+    avg_annotation: list 
+        list of avg annotation for each instrument
+
+    Returns
+    -------
+    
+    annotation : list
+        list of square box annotations
+    """
+
+    for i in range(inst_count):
+        height = avg_annotation[i]['bottomright']['y'] - avg_annotation[i]['topleft']['y']
+        width = avg_annotation[i]['bottomright']['x'] - avg_annotation[i]['topleft']['x']
+        length = round(max(height, width)/2)
+        center_x,  center_y =  round(avg_annotation[i]['topleft']['x']+width/2),  round(avg_annotation[i]['topleft']['y']+height/2)
+        avg_annotation[i]['topleft']['x'] = center_x - length
+        avg_annotation[i]['topleft']['y'] = center_y - length
+        avg_annotation[i]['bottomright']['x'] = center_x + length
+        avg_annotation[i]['bottomright']['y'] = center_y + length
+    return avg_annotation
+
 def instrument_count(filepath):
     """
     Counts instruments in a mix. Uses the URMP 
@@ -245,7 +276,7 @@ def draw_bbox(file_name):
 
             top_left = (int(row['topleft_x']), int(row['topleft_y']))
             bottom_right = (int(row['bottomright_x']), int(row['bottomright_y']))
-            print(top_left)
+            print(row['img_path'])
             img = cv2.rectangle(img,top_left,bottom_right,(0,255,0),3)
             cv2.imshow('image', img)
             cv2.waitKey(0)
@@ -300,17 +331,18 @@ if __name__ == "__main__":
     path = 'URMP_JSON'
     #print(path)
     #bbox_filepaths(path)
-    #draw_bbox('bbox_annotations_URMP.csv')
-    crop_video(
-        file_path= '/home/camel/Documents/URMP_audio_processing/URMP/12_Spring_vn_vn_vc/Vid_12_Spring_vn_vn_vc.mp4',
-        audio_file_path = '/home/camel/Documents/URMP_audio_processing/URMP/12_Spring_vn_vn_vc/AuSep_3_vc_12_Spring.wav',
-        annotation={
+    draw_bbox('bbox_annotations_URMP.csv')
+    # crop_video(
+    #     file_path= '/home/camel/Documents/URMP_audio_processing/URMP/30_Fugue_fl_fl_ob_sax/AuSep_4_sax_30_Fugue.wav',
+    #     audio_file_path = '/home/camel/Documents/URMP_audio_processing/URMP/25_Pirates_vn_vn_va_sax/AuSep_4_sax_25_Pirates.wav',
+    #     annotation={
             
-            'topleft_x' : 1396,
-            'topleft_y' : 498,
-            'bottomright_x' : 1648,
-            'bottomright_y' : 866    
-        }, 
-        out_file_path = 'crop.mp4'
-    )
+    #         'topleft_x' : 1552,
+    #         'topleft_y' : 507,
+    #         'bottomright_x' : 1989,
+    #         'bottomright_y' : 884    
+    #     }, 
+    #     out_file_mix = 'crop_mix.mp4',
+    #     out_file_inst = 'crop_inst.mp4'
+    # )
     
