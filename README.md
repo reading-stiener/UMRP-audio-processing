@@ -39,7 +39,7 @@ Currently, you need to install the following dependencies.
 
 To install the above, execute the following: 
 
-``` bash 
+```sbash 
 pip install -r requirements.txt
 ```
 
