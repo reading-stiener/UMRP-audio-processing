@@ -8,3 +8,4 @@ data
 __pycache__
 LSTM_dataset
 LSTM_dataset.zip
+test/HARDataset
