@@ -36,7 +36,7 @@ cnn.add(Flatten())
 cnn.trainable = True
 encoded_frame = TimeDistributed(cnn)(video)
 encoded_vid = LSTM(256)(encoded_frame)
-outputs = Dense(50, activation='relu')(encoded_vid)
+outputs = Dense(2, activation='relu')(encoded_vid)
 
 
 # putting layers into CNN-LSTM model
@@ -45,14 +45,14 @@ model = Model(inputs=[video],outputs=outputs)
 print(model.summary())
 model.compile(optimizer='adam', loss='mean_squared_logarithmic_error')
 
-n_samples = 1
+n_samples = 100
 n_frames = 50
 
 frame_sequence = np.random.randint(0.0,255.0,size=(n_samples, n_frames, H,W,C))
 print(frame_sequence.shape)
 
-y = np.random.random(size=(50,))
-y = np.reshape(y,(1,50))
+y = np.random.random(size=(100,2))
+#y = np.reshape(y,(100))
 print(y)
 
 model.fit(frame_sequence, y, validation_split=0.0,shuffle=False, batch_size=1)
