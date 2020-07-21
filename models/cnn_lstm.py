@@ -54,7 +54,7 @@ def load_dataset(prefix=''):
 	# load all test
 	testX, testy = load_dataset_group('test', prefix + 'HARDataset/')
 	print(testX.shape, testy.shape)
-	# zero-offset class values
+	# zero-offset class values 
 	trainy = trainy - 1
 	testy = testy - 1
 	# one hot encode y
@@ -68,9 +68,12 @@ def evaluate_model(trainX, trainy, testX, testy):
 	# define model
 	verbose, epochs, batch_size = 0, 25, 64
 	n_timesteps, n_features, n_outputs = trainX.shape[1], trainX.shape[2], trainy.shape[1]
+	print()
 	# reshape data into time steps of sub-sequences
 	n_steps, n_length = 4, 32
+	print(trainX.shape)
 	trainX = trainX.reshape((trainX.shape[0], n_steps, n_length, n_features))
+	print(trainX.shape)
 	testX = testX.reshape((testX.shape[0], n_steps, n_length, n_features))
 	# define model
 	model = Sequential()
