@@ -25,7 +25,7 @@ class TimeDistributedImageDataGenerator(ImageDataGenerator):
                  vertical_flip=False,
                  rescale=None,
                  preprocessing_function=None,
-                 data_format=None,
+                 data_format='channels_last',
                  validation_split=0.0,
                  dtype=None,
                  time_steps = 5):
@@ -173,14 +173,14 @@ class TimeDistributedImageDataGenerator(ImageDataGenerator):
                             classes=None,
                             class_mode='categorical',
                             batch_size=32,
-                            shuffle=True,
+                            shuffle=False,
                             seed=None,
                             save_to_dir=None,
                             save_prefix='',
-                            save_format='png',
+                            save_format='jpg',
                             subset=None,
                             interpolation='nearest',
-                            validate_filenames=True,
+                            validate_filenames=False,
                             **kwargs):
                             
                             return TimeDistributedDataFrameIterator(
@@ -220,6 +220,8 @@ class TimeDistributedDataFrameIterator(DataFrameIterator):
         # build batch of image data
         # self.filepaths is dynamic, is better to call it once outside the loop
         filepaths = self.filepaths
+
+        #print(filepaths)
         for i, j in enumerate(index_array):
             for k in reversed(range(0,TimeSteps)):
                 try:
@@ -228,17 +230,18 @@ class TimeDistributedDataFrameIterator(DataFrameIterator):
                                 target_size=self.target_size,
                                 interpolation=self.interpolation)
                     x = img_to_array(img, data_format=self.data_format)
+                    # Pillow images should be closed after `load_img`,
+                    # but not PIL images.
+                    if hasattr(img, 'close'):
+                        img.close()
+                    if self.image_data_generator:
+                        params = self.image_data_generator.get_random_transform(x.shape)
+                        x = self.image_data_generator.apply_transform(x, params)
+                        x = self.image_data_generator.standardize(x)
+                    batch_x[i][k] = x
                 except:
                     pass
-                # Pillow images should be closed after `load_img`,
-                # but not PIL images.
-                if hasattr(img, 'close'):
-                    img.close()
-                if self.image_data_generator:
-                    params = self.image_data_generator.get_random_transform(x.shape)
-                    x = self.image_data_generator.apply_transform(x, params)
-                    x = self.image_data_generator.standardize(x)
-                batch_x[i][k] = x
+            
         # optionally save augmented images to disk for debugging purposes
         if self.save_to_dir:
             for i, j in enumerate(index_array):
@@ -295,12 +298,13 @@ class TimeDistributedDirectoryIterator(DirectoryIterator):
                                 target_size=self.target_size,
                                 interpolation=self.interpolation)
                     x = img_to_array(img, data_format=self.data_format)
+                    # Pillow images should be closed after `load_img`,
+                    # but not PIL images.
+                    if hasattr(img, 'close'):
+                        img.close()
                 except:
                     pass
-                # Pillow images should be closed after `load_img`,
-                # but not PIL images.
-                if hasattr(img, 'close'):
-                    img.close()
+             
                 if self.image_data_generator:
                     params = self.image_data_generator.get_random_transform(x.shape)
                     x = self.image_data_generator.apply_transform(x, params)

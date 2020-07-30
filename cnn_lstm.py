@@ -11,48 +11,60 @@ from keras.layers.convolutional import MaxPooling2D
 from keras.utils import to_categorical
 from matplotlib import pyplot
 import numpy as np
+import pandas as pd
+from time_distributed_image_generator import TimeDistributedImageDataGenerator
 
+
+# image dimensions
 H=W=200
 C = 3
 
-# setting up video input 
-video = Input(shape=(None, H, W, C),name='video_input')
+df=pd.read_csv('LSTM/data/violin/raw/cleaned_dataset.csv')
+print(df)
+datagen=TimeDistributedImageDataGenerator(time_steps = 5)
+
+train_generator=datagen.flow_from_dataframe(
+    dataframe=df, 
+    directory='LSTM/data/violin/raw', 
+    x_col='file_name', 
+    y_col='class', 
+    class_mode="categorical", 
+    target_size=(H, W), 
+    batch_size=30,
+    subset='training'
+)
 
 # preparing the cnn model
-cnn = Sequential()
-cnn.add(Conv2D(64, (3, 3), activation='relu', padding='same', input_shape=(H, W, C)))
-cnn.add(Conv2D(64, (3, 3), activation='relu'))
-cnn.add(MaxPooling2D((2, 2)))
-cnn.add(Conv2D(128, (3, 3), activation='relu', padding='same'))
-cnn.add(Conv2D(128, (3, 3), activation='relu'))
-cnn.add(MaxPooling2D((2, 2)))
-cnn.add(Conv2D(256, (3, 3), activation='relu', padding='same'))
-cnn.add(Conv2D(256, (3, 3), activation='relu'))
-cnn.add(Conv2D(256, (3, 3), activation='relu'))
-cnn.add(MaxPooling2D((2, 2)))
-cnn.add(Flatten())
+model = Sequential()# after having Conv2D...
+model.add(
+    TimeDistributed(
+        Conv2D(64, (3,3), activation='relu'), 
+        input_shape=(5, H, W, C) # 5 images...
+    )
+)
+model.add(
+    TimeDistributed(
+        Conv2D(64, (3,3), activation='relu')
+    )
+)# We need to have only one dimension per output
+# to insert them to the LSTM layer - Flatten or use Pooling
+model.add(
+    TimeDistributed(
+        Flatten()
+    )
+)# previous layer gives 5 outputs, Keras will make the job
+# to configure LSTM inputs shape (5, ...)
+model.add(
+    LSTM(10, activation='relu', return_sequences=False)
+)# and then, common Dense layers... Dropout...
+# up to you
+model.add(Dense(10, activation='relu'))
+model.add(Dropout(.5))# For example, for 3 outputs classes 
+model.add(Dense(2, activation='sigmoid'))
+model.compile('adam', loss='categorical_crossentropy')
 
-# putting CNN with LSTM together
-cnn.trainable = True
-encoded_frame = TimeDistributed(cnn)(video)
-encoded_vid = LSTM(256)(encoded_frame)
-outputs = Dense(2, activation='relu')(encoded_vid)
 
-
-# putting layers into CNN-LSTM model
-model = Model(inputs=[video],outputs=outputs)
-
-print(model.summary())
-model.compile(optimizer='adam', loss='mean_squared_logarithmic_error')
-
-n_samples = 100
-n_frames = 50
-
-frame_sequence = np.random.randint(0.0,255.0,size=(n_samples, n_frames, H,W,C))
-print(frame_sequence.shape)
-
-y = np.random.random(size=(100,2))
-#y = np.reshape(y,(100))
-print(y)
-
-model.fit(frame_sequence, y, validation_split=0.0,shuffle=False, batch_size=1)
+#STEP_SIZE_TRAIN=train_generator.n//train_generator.batch_size
+#STEP_SIZE_VALID=valid_generator.n//valid_generator.batch_size
+model.fit(x=train_generator,
+        epochs=10)
