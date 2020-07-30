@@ -54,3 +54,13 @@ Finally, execute:
 ```bash 
 python generate_annotations.py 
 ```
+## Models
+
+Currently, I have added a CNN-LSTM model but it's too big for the machine to handle. 
+To get it working. Follow the steps below. 
+
+- Extract the LSTM folder into the working directory. 
+- Pick an instrument (eg. violin) and update the path in the utils/sort_csv.py to
+point to the either violin/raw or violin/opflow folder
+- Update the paths in cnn_lstm.py to point to the newly created cleaned_dataset.csv file
+- Excute cnn_lstm.py to run the model
