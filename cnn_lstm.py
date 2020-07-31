@@ -19,7 +19,7 @@ from time_distributed_image_generator import TimeDistributedImageDataGenerator
 H=W=200
 C = 3
 
-df=pd.read_csv('LSTM/data/violin/raw/cleaned_dataset.csv')
+df=pd.read_csv('LSTM/data/violin/raw/test_train.csv')
 print(df)
 datagen=TimeDistributedImageDataGenerator(time_steps = 5)
 
@@ -30,7 +30,7 @@ train_generator=datagen.flow_from_dataframe(
     y_col='class', 
     class_mode="categorical", 
     target_size=(H, W), 
-    batch_size=30,
+    batch_size=20,
     subset='training'
 )
 
@@ -56,7 +56,8 @@ model.add(
 # to configure LSTM inputs shape (5, ...)
 model.add(
     LSTM(10, activation='relu', return_sequences=False)
-)# and then, common Dense layers... Dropout...
+)
+# and then, common Dense layers... Dropout...
 # up to you
 model.add(Dense(10, activation='relu'))
 model.add(Dropout(.5))# For example, for 3 outputs classes 
@@ -66,5 +67,7 @@ model.compile('adam', loss='categorical_crossentropy')
 
 #STEP_SIZE_TRAIN=train_generator.n//train_generator.batch_size
 #STEP_SIZE_VALID=valid_generator.n//valid_generator.batch_size
-model.fit(x=train_generator,
-        epochs=10)
+model.fit(
+    x=train_generator,
+    epochs=10
+)
