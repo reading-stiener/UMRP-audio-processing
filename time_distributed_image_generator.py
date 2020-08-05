@@ -208,7 +208,7 @@ class TimeDistributedImageDataGenerator(ImageDataGenerator):
                             )
         
 class TimeDistributedDataFrameIterator(DataFrameIterator):
-    def _get_batches_of_transformed_samples(self, index_array):
+      def _get_batches_of_transformed_samples(self, index_array):
         """Gets a batch of transformed samples.
         # Arguments
             index_array: Array of sample indices to include in batch.
@@ -220,8 +220,6 @@ class TimeDistributedDataFrameIterator(DataFrameIterator):
         # build batch of image data
         # self.filepaths is dynamic, is better to call it once outside the loop
         filepaths = self.filepaths
-
-        #print(filepaths)
         for i, j in enumerate(index_array):
             for k in reversed(range(0,TimeSteps)):
                 try:
@@ -230,8 +228,6 @@ class TimeDistributedDataFrameIterator(DataFrameIterator):
                                 target_size=self.target_size,
                                 interpolation=self.interpolation)
                     x = img_to_array(img, data_format=self.data_format)
-                    # Pillow images should be closed after `load_img`,
-                    # but not PIL images.
                     if hasattr(img, 'close'):
                         img.close()
                     if self.image_data_generator:
@@ -241,8 +237,10 @@ class TimeDistributedDataFrameIterator(DataFrameIterator):
                     batch_x[i][k] = x
                 except:
                     pass
-            
-        # optionally save augmented images to disk for debugging purposes
+                # Pillow images should be closed after `load_img`,
+                # but not PIL images.
+                   
+        # optionally save augmented images  to disk for debugging purposes
         if self.save_to_dir:
             for i, j in enumerate(index_array):
                 img = array_to_img(batch_x[i], self.data_format, scale=True)

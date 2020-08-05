@@ -9,3 +9,5 @@ __pycache__
 LSTM_dataset
 LSTM_dataset.zip
 models/HARDataset
+saved_models
+*.png
