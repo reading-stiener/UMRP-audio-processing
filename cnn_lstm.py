@@ -14,7 +14,6 @@ import numpy as np
 import pandas as pd
 from time_distributed_image_generator import TimeDistributedImageDataGenerator
 
-
 # image dimensions
 H=W=200
 C = 3
@@ -22,7 +21,6 @@ C = 3
 df=pd.read_csv('LSTM/data/violin/raw/test_train.csv')
 print(df)
 datagen=TimeDistributedImageDataGenerator(time_steps = 5)
-
 train_generator=datagen.flow_from_dataframe(
     dataframe=df, 
     directory='LSTM/data/violin/raw', 
@@ -63,7 +61,6 @@ model.add(Dense(10, activation='relu'))
 model.add(Dropout(.5))# For example, for 3 outputs classes 
 model.add(Dense(2, activation='sigmoid'))
 model.compile('adam', loss='categorical_crossentropy')
-
 
 #STEP_SIZE_TRAIN=train_generator.n//train_generator.batch_size
 #STEP_SIZE_VALID=valid_generator.n//valid_generator.batch_size

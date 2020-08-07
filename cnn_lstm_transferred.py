@@ -12,7 +12,7 @@ import os
 H, W, C = 200, 200, 3
 time_steps = 5
 batch_size = 30
-epochs = 5
+epochs = 50
 
 # create a VGG16 "model", we will use
 # image with shape (200, 200, 3)
@@ -48,12 +48,16 @@ model.add(LSTM(256, activation='relu', return_sequences=False))
 model.add(Dense(64, activation='relu'))
 model.add(Dropout(.5))
 model.add(Dense(1, activation='sigmoid'))
-model.compile('adam', loss='binary_crossentropy')
+model.compile(
+    optimizer='adam', 
+    loss='binary_crossentropy',
+    metrics=['accuracy']    
+)
 
 print(model.summary())
 
-df_train = pd.read_csv('LSTM/data/violin/raw/train.csv')
-df_test = pd.read_csv('LSTM/data/violin/raw/test.csv')
+df_train = pd.read_csv('LSTM/data/violin/raw/dataset_prop/train_prop.csv')
+df_test = pd.read_csv('LSTM/data/violin/raw/dataset_prop/test_prop.csv')
 
 train_datagen = TimeDistributedImageDataGenerator(
     time_steps = 5,
@@ -106,14 +110,13 @@ history = model.fit(
 )
 print(history.history)
 # Plot training & validation accuracy values
-plt.plot(history.history['loss'], "g--", label='train_accuracy')
-plt.plot(history.history['val_loss'], "b--", label='validation_accuracy')
-plt.title('Train and Validation loss')
-plt.ylabel('Loss')
+plt.plot(history.history['accuracy'], "g--", label='train_accuracy')
+plt.plot(history.history['val_accuracy'], "b--", label='validation_accuracy')
+plt.title('Train and Validation accuracy')
+plt.ylabel('Accuracy')
 plt.xlabel('Epoch')
 plt.legend(loc='upper left')
-plt.savefig("training_validation.png")
-plt.show()
+plt.savefig("accuracy_violin_raw_ts5_e50.png")
 plt.close()
 
 scores = model.evaluate(
