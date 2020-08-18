@@ -47,10 +47,10 @@ def generate_dataset(file_name='bbox_annotations_URMP.csv'):
 
     URMP_base_path = 'URMP'
 
-    if not os.path.exists('LSTM_dataset'): 
-        os.mkdir('LSTM_dataset')
+    if not os.path.exists('LSTM_dataset_1'): 
+        os.mkdir('LSTM_dataset_1')
 
-    base_path = 'LSTM_dataset'
+    base_path = 'LSTM_dataset_1'
     with open(file_name, 'r') as csvfile:
         reader =  csv.DictReader(csvfile)
         # count for instruments in a file 
@@ -101,10 +101,11 @@ def generate_dataset(file_name='bbox_annotations_URMP.csv'):
                 file_name = audio_file_path,
                 hop_length = 512, 
                 frame_length = 2048, 
-                threshold = 0.01
+                threshold = 0.01,
+                time=3
             )
 
-            json_filename = out_file_folder + '/' + 'silences.JSON'
+            json_filename = out_file_folder + '/' + 'silences_'+inst+'_'+str(count)+'_.JSON'
             with open(json_filename, 'w') as json_file:
                 json.dump(silence, json_file, indent=4)
                 

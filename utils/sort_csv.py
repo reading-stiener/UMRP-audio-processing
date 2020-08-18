@@ -49,5 +49,5 @@ def count_p_np(file_csv_path):
     return p_count, np_count
 
 if __name__ == '__main__':
-    create_p_np_annotations(folder_path='/home/camel/Documents/URMP_audio_processing/LSTM/data/violin/raw', skip=10)
-    print(count_p_np(file_csv_path='/home/camel/Documents/URMP_audio_processing/LSTM/data/violin/raw/dataset_prop/train_prop.csv'))
+    create_p_np_annotations(folder_path='/home/camel/Documents/URMP_audio_processing/LSTM/data/violin/opFlow', skip=10)
+    print(count_p_np(file_csv_path='/home/camel/Documents/URMP_audio_processing/LSTM/data/violin/opFlow/dataset_prop/train_prop.csv'))

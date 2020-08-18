@@ -7,7 +7,7 @@ import math
 import csv
 from collections import OrderedDict
 
-def visualize_rms(x, sr, hop_length, frame_length):
+def visualize_rms(file_name, hop_length, frame_length):
     """
     Visualize root mean square energies of a sound signal.
     Produces graphs of the signal alongside rms energies 
@@ -15,12 +15,6 @@ def visualize_rms(x, sr, hop_length, frame_length):
 
     Parameters
     ----------
-
-    x : nparray
-        Numpy array of sound signal. 
-    
-    sr : int
-        Sampling rate.
     
     hop_length : int
     
@@ -31,6 +25,8 @@ def visualize_rms(x, sr, hop_length, frame_length):
 
     None
     """
+    x, sr = librosa.load(file_name)
+    
     # figure size
     plt.figure(figsize=(8,6))
     plt.subplot(2, 1, 1)
@@ -65,7 +61,7 @@ def visualize_rms(x, sr, hop_length, frame_length):
     plt.tight_layout()
     plt.show()
 
-def find_silences(file_name, hop_length, frame_length, threshold):
+def find_silences(file_name, hop_length, frame_length, threshold, time):
     """
     Finds the silences in a individual piece using the root mean
     square energies of the signal. A portion of a signal is defined
@@ -123,12 +119,13 @@ def find_silences(file_name, hop_length, frame_length, threshold):
                 silence_started = True
                 start_idx = idx
         else:
-            if t[idx] - t[start_idx] > 3 and silence_started:
+            if t[idx] - t[start_idx] > time and silence_started:
                 total_silence = total_silence + (t[idx] - t[start_idx])
-                silences[round(t[start_idx], 3)] = round(t[idx], 3)
+                silences[round(t[start_idx], time)] = round(t[idx], time)
      
             silence_started = False
-           
+
+    print(silences)       
     return {
 
         'silences' : silences,
@@ -207,7 +204,13 @@ def audio_silence_annotations(file_paths):
 if __name__ == "__main__":
    path = 'URMP'
    file_paths = audio_filepaths(path)
-   audio_silence_annotations(file_paths)
+   file_path = file_paths[20]
+   #file_path = '/home/camel/Documents/URMP_audio_processing/URMP/20_Pavane_tpt_vn_vc/AuSep_2_vn_20_Pavane.wav'
+   #file_path = '/home/camel/Documents/URMP_audio_processing/URMP/44_K515_vn_vn_va_va_vc/AuSep_5_vc_44_K515.wav'
+   file_path = '/home/camel/Documents/URMP_audio_processing/URMP/09_Jesus_tpt_vn/AuSep_2_vn_09_Jesus.wav'
+   visualize_rms(file_path, 512, 2048)
+   find_silences(file_path, 512, 2048, 0.005, 3)
+   #audio_silence_annotations(file_paths)
 
 
     

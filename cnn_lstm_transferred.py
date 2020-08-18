@@ -1,5 +1,6 @@
 import keras
 from keras.layers import Dense, LSTM, Flatten, TimeDistributed, Conv2D, Dropout
+from keras.optimizers import Adam, SGD
 from keras import Sequential
 from keras.applications.vgg16 import VGG16
 from keras.callbacks import ModelCheckpoint
@@ -48,16 +49,17 @@ model.add(LSTM(256, activation='relu', return_sequences=False))
 model.add(Dense(64, activation='relu'))
 model.add(Dropout(.5))
 model.add(Dense(1, activation='sigmoid'))
+adam = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
 model.compile(
-    optimizer='adam', 
+    optimizer=adam, 
     loss='binary_crossentropy',
     metrics=['accuracy']    
 )
 
 print(model.summary())
 
-df_train = pd.read_csv('LSTM/data/violin/raw/dataset_prop/train_prop.csv')
-df_test = pd.read_csv('LSTM/data/violin/raw/dataset_prop/test_prop.csv')
+df_train = pd.read_csv('LSTM/data/violin/opFlow/dataset_prop/train_prop.csv')
+df_test = pd.read_csv('LSTM/data/violin/opFlow/dataset_prop/test_prop.csv')
 
 train_datagen = TimeDistributedImageDataGenerator(
     time_steps = 5,
@@ -68,7 +70,7 @@ test_datagen = TimeDistributedImageDataGenerator(rescale=1./255)
     
 train_generator = train_datagen.flow_from_dataframe(
     dataframe=df_train, 
-    directory='LSTM/data/violin/raw', 
+    directory='LSTM/data/violin/opFlow', 
     x_col='file_name', 
     y_col='class', 
     class_mode="binary", 
@@ -78,7 +80,7 @@ train_generator = train_datagen.flow_from_dataframe(
 )
 valid_generator = train_datagen.flow_from_dataframe(
     dataframe=df_train, 
-    directory='LSTM/data/violin/raw', 
+    directory='LSTM/data/violin/opFlow', 
     x_col='file_name', 
     y_col='class', 
     class_mode="binary", 
@@ -88,7 +90,7 @@ valid_generator = train_datagen.flow_from_dataframe(
 )
 test_generator = test_datagen.flow_from_dataframe(
     dataframe=df_test, 
-    directory='LSTM/data/violin/raw', 
+    directory='LSTM/data/violin/opFlow', 
     x_col='file_name', 
     y_col='class', 
     class_mode="binary", 
@@ -116,7 +118,7 @@ plt.title('Train and Validation accuracy')
 plt.ylabel('Accuracy')
 plt.xlabel('Epoch')
 plt.legend(loc='upper left')
-plt.savefig("accuracy_violin_raw_ts5_e50.png")
+plt.savefig("accuracy_violin_opflow_ts5_e50.png")
 plt.close()
 
 scores = model.evaluate(
