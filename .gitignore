@@ -12,5 +12,6 @@ models/HARDataset
 saved_models
 *.png
 LSTM_dataset_1
+LSTM*
 Cats&Dogs
 cnn_lstm_syn_test2

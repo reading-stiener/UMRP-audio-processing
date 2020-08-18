@@ -86,12 +86,13 @@ def frameOut(path, instName):
         print(e)
         pass
 
-def compileInterval(path):
-
+def compileInterval(path, inst_file):
+    # getting rid of file extension
+    inst_file = inst_file[:-4]
     for i in os.listdir(path):
-        if i.endswith('.JSON'):
+        if i.endswith('.JSON') and inst_file in i:
             break
-
+    print(i)
     with open(path + i, 'r', encoding='utf-8-sig') as inFile:
         data = json.load(inFile)
 
@@ -319,7 +320,8 @@ def gTruthGene(vidPath, outPath, path):
         # frame -= mean
 
         # draw the activity on the output frame
-        s_list = compileInterval(path)
+        vid_file = vidPath.split('/')[-1]
+        s_list = compileInterval(path, vid_file)
         playing = checkPlay(s_list, num)
 
         print(s_list)
@@ -363,7 +365,7 @@ def gTruthGene(vidPath, outPath, path):
 
 def main():
 
-    path = '/home/camel/Documents/URMP_audio_processing/LSTM_dataset/violin/09_Jesus_tpt_vn/'
+    path = '/home/camel/Documents/URMP_audio_processing/LSTM_dataset_2/violin/20_Pavane_tpt_vn_vc/'
     gTruthGene(path + 'violin_2.mp4', path + 'g_truth_violin_2.avi', path)
 
     # global frame_num
