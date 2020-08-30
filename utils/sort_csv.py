@@ -20,8 +20,11 @@ def create_p_np_annotations(folder_path, skip):
         # sort the file list in the order of file numbers
         if r_dir != folder_path:
             return
+        dataset_folder = os.path.join(r_dir, 'dataset')
+        if not os.path.exists(dataset_folder): 
+            os.mkdir(dataset_folder)
         file_list.sort(key = lambda x : int(x.split('_')[2]))
-        with open(os.path.join(r_dir, 'dataset_prop', 'train_prop.csv'), 'w') as csvfile:
+        with open(os.path.join(dataset_folder, 'cleaned.csv'), 'w') as csvfile:
             fieldnames = ['file_name', 'class' ]
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
             writer.writeheader()

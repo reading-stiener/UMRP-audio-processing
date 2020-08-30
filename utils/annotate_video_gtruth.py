@@ -6,12 +6,12 @@ import tensorflow as tf
 import cv2
 import numpy as np
 import json
-import openpyxl as xl
 import os 
 import csv
 import pandas
 import shutil
 from random import randrange
+from sort_csv import create_p_np_annotations, count_p_np
 
 def frame_out(path, inst_name, audio_file):
     """
@@ -150,9 +150,10 @@ def check_play(silence_list, curr_frame):
     
     return True
 
-def compileCSV(path, inst_name):
+def compile_csv(path, inst_name, skip):
     """
-    Compiles file names with annotations into a CSV file.
+    Uses the CSV module to create a CSV list of file names for
+    raw and opFlow folders.
 
     Parameters:
     -----------
@@ -163,49 +164,13 @@ def compileCSV(path, inst_name):
     inst_name : str
         Instrument name.
     """
-
     inst_path = path + inst_name + '/'
     
     if not os.path.exists(inst_path): 
         os.mkdir(inst_path)
-     
-    op_list = os.listdir(inst_path + '/opFlow/')
-    raw_list = os.listdir(inst_path + '/raw/')
 
-    wb = xl.Workbook()
-    ws = wb.active
-
-    ws.cell(row = 1, column = 1).value = 'name'
-    ws.cell(row = 1, column = 2).value = 'label'
-    for i in op_list:
-
-        row_num = ws.max_row  + 1
-        ws.cell(row = row_num, column = 1).value = 'opFlow/' + i
-        if 'np' in i:
-            ws.cell(row = row_num, column = 2).value = '0'
-        else:
-            ws.cell(row = row_num, column = 2).value = '1'
-
-        print('done with ' + i)
-
-    for i in raw_list:
-        row_num = ws.max_row  + 1
-        ws.cell(row = row_num, column = 1).value = 'opFlow/' + i
-        if 'np' in i:
-            ws.cell(row = row_num, column = 2).value = '0'
-        else:
-            ws.cell(row = row_num, column = 2).value = '1'
-
-        print('done with ' + i)
-
-    wb.save(inst_path + '/cleaned_pre.xlsx')
-
-    data_xls = pandas.read_excel(inst_path + '/cleaned_pre.xlsx', 'Sheet', index_col=None)
-    data_xls.to_csv(inst_path + '/cleaned.csv', encoding='utf-8', index=False)
-
-    for i in os.listdir(inst_path):
-        if i.endswith('.xlsx'):
-            os.remove(inst_path + '/' + i)
+    create_p_np_annotations(inst_path, skip)
+    print(count_p_np(os.path.join(inst_path, 'dataset', 'cleaned.csv')))
 
 def resize(percent, path, inst_name):
 
@@ -465,14 +430,9 @@ def main():
     # resize_one(0.15, 'URMP/data/', 'violin_cello_vNN', 'n')
     # sameSize('URMP/data/', 'trumpet')
     # move('cello', 'URMP/data/', 'URMP/data/violin_cello_vNN/', 4385, 'n_playing')
+    
+    compile_csv('LSTM/data2/', 'violin/raw', 10)
 
-    compileCSV('LSTM/data2/', 'violin')
-    # compileCSV('LSTM/data/', 'violin')
-    # compileCSV('LSTM/data/', 'viola')
-    # compileCSV('LSTM/data/', 'double_bass')compileCSV('LSTM/data/', 'cello')
-    # compileCSV('LSTM/data/', 'violin')
-    # compileCSV('LSTM/data/', 'viola')
-    # compileCSV('LSTM/data/', 'double_bass')
 
 if __name__ == '__main__':
     main()
