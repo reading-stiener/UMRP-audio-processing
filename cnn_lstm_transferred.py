@@ -58,8 +58,8 @@ model.compile(
 
 print(model.summary())
 
-df_train = pd.read_csv('LSTM/data/violin/opFlow/dataset_prop/train_prop.csv')
-df_test = pd.read_csv('LSTM/data/violin/opFlow/dataset_prop/test_prop.csv')
+df_train = pd.read_csv('LSTM/data2/violin/raw/dataset/train_prop.csv')
+df_test = pd.read_csv('LSTM/data2/violin/raw/dataset/test_prop.csv')
 
 train_datagen = TimeDistributedImageDataGenerator(
     time_steps = 5,
@@ -70,7 +70,7 @@ test_datagen = TimeDistributedImageDataGenerator(rescale=1./255)
     
 train_generator = train_datagen.flow_from_dataframe(
     dataframe=df_train, 
-    directory='LSTM/data/violin/opFlow', 
+    directory='LSTM/data2/violin/raw', 
     x_col='file_name', 
     y_col='class', 
     class_mode="binary", 
@@ -80,7 +80,7 @@ train_generator = train_datagen.flow_from_dataframe(
 )
 valid_generator = train_datagen.flow_from_dataframe(
     dataframe=df_train, 
-    directory='LSTM/data/violin/opFlow', 
+    directory='LSTM/data2/violin/raw', 
     x_col='file_name', 
     y_col='class', 
     class_mode="binary", 
@@ -90,7 +90,7 @@ valid_generator = train_datagen.flow_from_dataframe(
 )
 test_generator = test_datagen.flow_from_dataframe(
     dataframe=df_test, 
-    directory='LSTM/data/violin/opFlow', 
+    directory='LSTM/data2/violin/raw', 
     x_col='file_name', 
     y_col='class', 
     class_mode="binary", 
@@ -118,7 +118,7 @@ plt.title('Train and Validation accuracy')
 plt.ylabel('Accuracy')
 plt.xlabel('Epoch')
 plt.legend(loc='upper left')
-plt.savefig("accuracy_violin_opflow_ts5_e50.png")
+plt.savefig("accuracy_violin_raw_ts5_e50.png")
 plt.close()
 
 scores = model.evaluate(
