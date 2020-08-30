@@ -13,15 +13,25 @@ import pandas
 import shutil
 from random import randrange
 
-def frameOut(path, instName):
+def frame_out(path, inst_name, audio_file):
+    """
+    Produces dataset folder with correct labels: p and np. 
+
+    Parameters:
+    -----------
+
+    path : str
+        Base directory path.
+
+    inst_name : str
+        Name of instrument.
+
+    audio_file : str
+        Name of audio file.
+    """
 
     try:
-
-        for i in os.listdir(path):
-            if i.endswith('.mp4'):
-                vid = path + i
-                break
-
+        vid = os.path.join(path, audio_file)
         cap = cv2.VideoCapture(vid)
         ret, frame1 = cap.read()
         prvs = cv2.cvtColor(frame1,cv2.COLOR_BGR2GRAY)
@@ -37,6 +47,7 @@ def frameOut(path, instName):
         pass
 
     # out = cv2.VideoWriter('test_vid.mp4',-1,1,(600, 600))
+    print('File opens!!')
 
     try:
         while(cap.isOpened()):
@@ -61,18 +72,20 @@ def frameOut(path, instName):
                 cv2.imwrite('opticalhsv.png',rgb)
 
             #Check playing or not playing from JSON
+            print(path, ' ', audio_file)
+            s_list = compile_interval(path, audio_file)
             
-            s_list = compileInterval(path)
-            playing = checkPlay(s_list, frame)
+            playing = check_play(s_list, frame)
 
             dir_name = path[path[:-1].rfind('/') + 1:-1]
 
             if playing:
-                cv2.imwrite('LSTM/data/' + instName + '/opFlow/op_' + instName + '_' + str(frame_num) + '_p' + '.jpg', rgb)
-                cv2.imwrite('LSTM/data/' + instName + '/raw/raw_' + instName + '_' + str(frame_num) + '_p' + '.jpg', frame2)
+                print("wrote a file!!")
+                cv2.imwrite('LSTM/data2/' + inst_name + '/opFlow/op_' + inst_name + '_' + str(frame_num) + '_p' + '.jpg', rgb)
+                cv2.imwrite('LSTM/data2/' + inst_name + '/raw/raw_' + inst_name + '_' + str(frame_num) + '_p' + '.jpg', frame2)
             else:
-                cv2.imwrite('LSTM/data/' + instName + '/opFlow/op_' + instName + '_' + str(frame_num) + '_np' + '.jpg', rgb)
-                cv2.imwrite('LSTM/data/' + instName + '/raw/raw_' + instName + '_' + str(frame_num) + '_np' + '.jpg', frame2)
+                cv2.imwrite('LSTM/data2/' + inst_name + '/opFlow/op_' + inst_name + '_' + str(frame_num) + '_np' + '.jpg', rgb)
+                cv2.imwrite('LSTM/data2/' + inst_name + '/raw/raw_' + inst_name + '_' + str(frame_num) + '_np' + '.jpg', frame2)
             
             
             frame_num = frame_num + 1
@@ -86,45 +99,84 @@ def frameOut(path, instName):
         print(e)
         pass
 
-def compileInterval(path, inst_file):
+def compile_interval(path, audio_filename):
+    """
+    Produces a list of intervals of silences from a silence
+    JSON file. 
+
+    Parameters: 
+    -----------
+
+    path : str
+        Base directory of the audio file.
+    
+    audio_filename:
+        Name of the audio file we are working on.
+    """
     # getting rid of file extension
-    inst_file = inst_file[:-4]
+    audio_file = audio_filename[:-4]
     for i in os.listdir(path):
-        if i.endswith('.JSON') and inst_file in i:
+        if i.endswith('.JSON') and audio_file in i:
             break
     print(i)
-    with open(path + i, 'r', encoding='utf-8-sig') as inFile:
+    with open(os.path.join(path, i), 'r', encoding='utf-8-sig') as inFile:
         data = json.load(inFile)
 
     s_list = [[round(eval(k),2), round(v,2)] for k, v in data['silences'].items()] 
     
     return s_list
 
-def checkPlay(int_list, currFrame):
+def check_play(silence_list, curr_frame):
+    """
+    Produces a playing, not playing boolean for a particular 
+    frame.
 
-    currTime = currFrame/30
+    Parameters:
+    -----------
 
-    for i in int_list:
-        if currTime > i[0] and currTime < i[1]:
+    silence_list : str
+        List of silence intervals.
+
+    curr_frame : int
+        Current frame count
+    """
+    curr_time = curr_frame/30
+
+    for i in silence_list:
+        if curr_time > i[0] and curr_time < i[1]:
             return False
         else:
             pass
     
     return True
 
-def compileCSV(path, instName):
+def compileCSV(path, inst_name):
+    """
+    Compiles file names with annotations into a CSV file.
 
-    instPath = path + '/' + instName + '/'
+    Parameters:
+    -----------
 
-    op_list = os.listdir(instPath + '/opFlow/')
-    raw_list = os.listdir(instPath + '/raw/')
+    path : str
+        Base directory.
+
+    inst_name : str
+        Instrument name.
+    """
+
+    inst_path = path + inst_name + '/'
+    
+    if not os.path.exists(inst_path): 
+        os.mkdir(inst_path)
+     
+    op_list = os.listdir(inst_path + '/opFlow/')
+    raw_list = os.listdir(inst_path + '/raw/')
 
     wb = xl.Workbook()
     ws = wb.active
 
     ws.cell(row = 1, column = 1).value = 'name'
-    ws.cell(row = 1, column = 2).value = 'label' 
-
+    ws.cell(row = 1, column = 2).value = 'label'
     for i in op_list:
 
         row_num = ws.max_row  + 1
@@ -146,22 +198,22 @@ def compileCSV(path, instName):
 
         print('done with ' + i)
 
-    wb.save(instPath + '/cleaned_pre.xlsx')
+    wb.save(inst_path + '/cleaned_pre.xlsx')
 
-    data_xls = pandas.read_excel(instPath + '/cleaned_pre.xlsx', 'Sheet', index_col=None)
-    data_xls.to_csv(instPath + '/cleaned.csv', encoding='utf-8', index=False)
+    data_xls = pandas.read_excel(inst_path + '/cleaned_pre.xlsx', 'Sheet', index_col=None)
+    data_xls.to_csv(inst_path + '/cleaned.csv', encoding='utf-8', index=False)
 
-    for i in os.listdir(instPath):
+    for i in os.listdir(inst_path):
         if i.endswith('.xlsx'):
-            os.remove(instPath + '/' + i)
+            os.remove(inst_path + '/' + i)
 
-def resize(percent, path, instName):
+def resize(percent, path, inst_name):
 
-    instPath = path + instName
+    inst_path = path + inst_name
 
-    n_playing = os.listdir(instPath + '/n_playing')
-    playing = os.listdir(instPath + '/playing')
-    test = os.listdir(instPath + '/test')
+    n_playing = os.listdir(inst_path + '/n_playing')
+    playing = os.listdir(inst_path + '/playing')
+    test = os.listdir(inst_path + '/test')
 
     moved = 0
 
@@ -176,7 +228,7 @@ def resize(percent, path, instName):
             r_num = randrange(0, len(n_playing))
             x = n_playing[r_num]
         npList.append(x)
-        os.rename(instPath + '/n_playing/' + x, path + instName + '_bckup/bckup/n_playing/' + x)
+        os.rename(inst_path + '/n_playing/' + x, path + inst_name + '_bckup/bckup/n_playing/' + x)
         moved += 1
 
     for i in range(round(percent * len(playing))):
@@ -186,18 +238,18 @@ def resize(percent, path, instName):
             r_num = randrange(0, len(playing))
             x = playing[r_num]
         pList.append(x)
-        os.rename(instPath + '/playing/' + x, path + instName + '_bckup/bckup/playing/' + x)
+        os.rename(inst_path + '/playing/' + x, path + inst_name + '_bckup/bckup/playing/' + x)
         moved += 1
 
     print('Moved ' + str(moved) + ' files')
 
-def resize_one(percent, path, instName, pnp):
+def resize_one(percent, path, inst_name, pnp):
 
-    instPath = path + instName
+    inst_path = path + inst_name
 
-    n_playing = os.listdir(instPath + '/n_playing')
-    playing = os.listdir(instPath + '/playing')
-    test = os.listdir(instPath + '/test')
+    n_playing = os.listdir(inst_path + '/n_playing')
+    playing = os.listdir(inst_path + '/playing')
+    test = os.listdir(inst_path + '/test')
 
     moved = 0
 
@@ -213,7 +265,7 @@ def resize_one(percent, path, instName, pnp):
                 r_num = randrange(0, len(n_playing))
                 x = n_playing[r_num]
             npList.append(x)
-            os.rename(instPath + '/n_playing/' + x, path + instName + '_bckup/bckup/n_playing/' + x)
+            os.rename(inst_path + '/n_playing/' + x, path + inst_name + '_bckup/bckup/n_playing/' + x)
             moved += 1
     elif pnp == 'p':
         for i in range(round(percent * len(playing))):
@@ -223,17 +275,17 @@ def resize_one(percent, path, instName, pnp):
                 r_num = randrange(0, len(playing))
                 x = playing[r_num]
             pList.append(x)
-            os.rename(instPath + '/playing/' + x, path + instName + '_bckup/bckup/playing/' + x)
+            os.rename(inst_path + '/playing/' + x, path + inst_name + '_bckup/bckup/playing/' + x)
             moved += 1
 
     print('Moved ' + str(moved) + ' files')
 
-def sameSize(path, instName):
+def sameSize(path, inst_name):
 
-    instPath = path + instName
+    inst_path = path + inst_name
 
-    n_playing = os.listdir(instPath + '/n_playing')
-    playing = os.listdir(instPath + '/playing')
+    n_playing = os.listdir(inst_path + '/n_playing')
+    playing = os.listdir(inst_path + '/playing')
     
     moved = 0
 
@@ -250,17 +302,17 @@ def sameSize(path, instName):
             r_num = randrange(0, len(playing))
             x = playing[r_num]
         pList.append(x)
-        os.rename(instPath + '/playing/' + x, path + instName + '_bckup/bckup/playing/' + x)
+        os.rename(inst_path + '/playing/' + x, path + inst_name + '_bckup/bckup/playing/' + x)
         moved += 1
 
     print('Resized playing w.r.t. n_playing --> Moved ' + str(moved) + ' files')
 
-def move(instName, path, n_path, num_files, pnp):
+def move(inst_name, path, n_path, num_files, pnp):
 
-    instPath = path + instName
+    inst_path = path + inst_name
 
-    n_playing = os.listdir(instPath + '/n_playing')
-    playing = os.listdir(instPath + '/playing')
+    n_playing = os.listdir(inst_path + '/n_playing')
+    playing = os.listdir(inst_path + '/playing')
     
     moved = 0
 
@@ -274,19 +326,20 @@ def move(instName, path, n_path, num_files, pnp):
             r_num = randrange(0, len(playing))
             x = playing[r_num]
         pList.append(x)
-        os.rename(instPath + '/playing/' + x, n_path + '/n_playing/cello_moved_' + str(moved) + '.jpg')
+        os.rename(inst_path + '/playing/' + x, n_path + '/n_playing/cello_moved_' + str(moved) + '.jpg')
         moved += 1
 
     print('Resized playing w.r.t. n_playing --> Moved ' + str(moved) + ' files')
     
 
 def extract_flow(inst):
-
-    for i in os.listdir('cnn_set/' + inst +'/'):
-        n_path = 'cnn_set/' + inst + '/' + i + '/'
-        frameOut(n_path, inst)
-
-    # compileCSV('URMP/data/', inst)
+    for r_dir, sub_dir_list, file_list in os.walk(os.path.join('LSTM_dataset_4', inst)):
+        for file_name in file_list:
+            if 'mix' not in file_name and \
+               'annotated' not in file_name and \
+               'JSON' not in file_name:
+                #print(r_dir, ' ',file_name)
+                frame_out(r_dir, inst, file_name)
 
 def gTruthGene(vidPath, outPath, path):
 
@@ -321,8 +374,8 @@ def gTruthGene(vidPath, outPath, path):
 
         # draw the activity on the output frame
         vid_file = vidPath.split('/')[-1]
-        s_list = compileInterval(path, vid_file)
-        playing = checkPlay(s_list, num)
+        s_list = compile_interval(path, vid_file)
+        playing = check_play(s_list, num)
 
         print(s_list)
         print(playing)
@@ -364,12 +417,37 @@ def gTruthGene(vidPath, outPath, path):
 
 
 def main():
+    # inst_list = [
+    #     'basoon',
+    #     'cello',
+    #     'clarinet',
+    #     'double_bass',
+    #     'flute',
+    #     'horn',
+    #     'oboe',
+    #     'saxophone',
+    #     'trombone',
+    #     'trumpet',
+    #     'tuba',
+    #     'viola',
+    #     'violin'
+    # ]
 
-    path = '/home/camel/Documents/URMP_audio_processing/LSTM_dataset_2/violin/20_Pavane_tpt_vn_vc/'
-    gTruthGene(path + 'violin_2.mp4', path + 'g_truth_violin_2.avi', path)
+    # for inst in inst_list:
+    #     # Traverse through the directories (BFS traversal)
+    #     for r_dir, sub_dir_list, file_list in os.walk(os.path.join(base_dir, inst)):
+    #         # print('r_dir ', r_dir)
+    #         # print('sub_dir_list ', sub_dir_list)
+    #         # print('file_list ', file_list)
+    #         for file_name in file_list: 
+    #             if 'mix' not in file_name and 'mp4' in file_name: 
+    #                 gTruthGene(os.path.join(r_dir, file_name), os.path.join(r_dir, file_name[:-4]+'annotated.mp4'), r_dir)
 
-    # global frame_num
-    # frame_num = 0 
+    #path = '/home/camel/Documents/URMP_audio_processing/LSTM_dataset_2/violin/20_Pavane_tpt_vn_vc/'
+    base_dir = '/home/camel/Documents/URMP_audio_processing/LSTM_dataset_2'
+     
+    global frame_num
+    frame_num = 0 
 
     # extract_flow('violin')
 
@@ -378,17 +456,17 @@ def main():
 
     # frame_num = 0 
     # extract_flow('cello')
-    # print(compileInterval('cnn_set/trombone/07_GString_tpt_tbn/'))
-    # print(compileInterval('cnn_set/trombone/07_GString_tpt_tbn/'))
+    # print(compile_interval('cnn_set/trombone/07_GString_tpt_tbn/'))
+    # print(compile_interval('cnn_set/trombone/07_GString_tpt_tbn/'))
     
 
-    # frameOut('cnn_set/trombone/07_GString_tpt_tbn/', 'trombone')
+    # frame_out('cnn_set/trombone/07_GString_tpt_tbn/', 'trombone')
 
     # resize_one(0.15, 'URMP/data/', 'violin_cello_vNN', 'n')
     # sameSize('URMP/data/', 'trumpet')
     # move('cello', 'URMP/data/', 'URMP/data/violin_cello_vNN/', 4385, 'n_playing')
 
-    # compileCSV('LSTM/data/', 'cello')
+    compileCSV('LSTM/data2/', 'violin')
     # compileCSV('LSTM/data/', 'violin')
     # compileCSV('LSTM/data/', 'viola')
     # compileCSV('LSTM/data/', 'double_bass')compileCSV('LSTM/data/', 'cello')
@@ -397,5 +475,4 @@ def main():
     # compileCSV('LSTM/data/', 'double_bass')
 
 if __name__ == '__main__':
-
     main()

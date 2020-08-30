@@ -33,7 +33,7 @@ def visualize_rms(file_name, hop_length, frame_length):
 
     # display signal
     librosa.display.waveplot(x, sr=sr)
-    plt.title('Wave plot')
+    plt.title('Wave plot 1')
 
     # calculate root mean square
     rms = librosa.feature.rms(
@@ -121,7 +121,7 @@ def find_silences(file_name, hop_length, frame_length, threshold, time):
         else:
             if t[idx] - t[start_idx] > time and silence_started:
                 total_silence = total_silence + (t[idx] - t[start_idx])
-                silences[round(t[start_idx], time)] = round(t[idx], time)
+                silences[round(t[start_idx], 3)] = round(t[idx], 3)
      
             silence_started = False
 
@@ -199,6 +199,7 @@ def audio_silence_annotations(file_paths):
             }
 
             print('wrote row for ', file)
+
             writer.writerow(row)
 
 if __name__ == "__main__":
@@ -207,9 +208,9 @@ if __name__ == "__main__":
    file_path = file_paths[20]
    #file_path = '/home/camel/Documents/URMP_audio_processing/URMP/20_Pavane_tpt_vn_vc/AuSep_2_vn_20_Pavane.wav'
    #file_path = '/home/camel/Documents/URMP_audio_processing/URMP/44_K515_vn_vn_va_va_vc/AuSep_5_vc_44_K515.wav'
-   file_path = '/home/camel/Documents/URMP_audio_processing/URMP/09_Jesus_tpt_vn/AuSep_2_vn_09_Jesus.wav'
+   file_path = '/home/camel/Documents/URMP_audio_processing/URMP/14_Waltz_fl_fl_cl/AuSep_2_fl_14_Waltz.wav'
    visualize_rms(file_path, 512, 2048)
-   find_silences(file_path, 512, 2048, 0.005, 3)
+   find_silences(file_path, 512, 2048, 0.005, 0.1)
    #audio_silence_annotations(file_paths)
 
 
