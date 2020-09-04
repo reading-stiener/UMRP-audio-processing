@@ -72,7 +72,6 @@ def frame_out(path, inst_name, audio_file):
                 cv2.imwrite('opticalhsv.png',rgb)
 
             #Check playing or not playing from JSON
-            print(path, ' ', audio_file)
             s_list = compile_interval(path, audio_file)
             
             playing = check_play(s_list, frame)
@@ -80,13 +79,11 @@ def frame_out(path, inst_name, audio_file):
             dir_name = path[path[:-1].rfind('/') + 1:-1]
 
             if playing:
-                print("wrote a file!!")
                 cv2.imwrite('LSTM/data2/' + inst_name + '/opFlow/op_' + inst_name + '_' + str(frame_num) + '_p' + '.jpg', rgb)
                 cv2.imwrite('LSTM/data2/' + inst_name + '/raw/raw_' + inst_name + '_' + str(frame_num) + '_p' + '.jpg', frame2)
             else:
                 cv2.imwrite('LSTM/data2/' + inst_name + '/opFlow/op_' + inst_name + '_' + str(frame_num) + '_np' + '.jpg', rgb)
                 cv2.imwrite('LSTM/data2/' + inst_name + '/raw/raw_' + inst_name + '_' + str(frame_num) + '_np' + '.jpg', frame2)
-            
             
             frame_num = frame_num + 1
             frame = frame + 1
@@ -302,6 +299,7 @@ def extract_flow(inst):
         for file_name in file_list:
             if 'mix' not in file_name and \
                'annotated' not in file_name and \
+               'txt' not in file_name and \
                'JSON' not in file_name:
                 #print(r_dir, ' ',file_name)
                 frame_out(r_dir, inst, file_name)
@@ -414,7 +412,7 @@ def main():
     global frame_num
     frame_num = 0 
 
-    # extract_flow('violin')
+    extract_flow('guitar')
 
     # frame_num = 0 
     # extract_flow('viola')
@@ -431,7 +429,7 @@ def main():
     # sameSize('URMP/data/', 'trumpet')
     # move('cello', 'URMP/data/', 'URMP/data/violin_cello_vNN/', 4385, 'n_playing')
     
-    compile_csv('LSTM/data2/', 'violin/raw', 10)
+    compile_csv('LSTM/data2/', 'guitar/raw', 1)
 
 
 if __name__ == '__main__':

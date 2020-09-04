@@ -134,7 +134,7 @@ class TimeDistributedImageDataGenerator(ImageDataGenerator):
                             classes=None,
                             class_mode='categorical',
                             batch_size=32,
-                            shuffle=True,
+                            shuffle=False,
                             seed=None,
                             save_to_dir=None,
                             save_prefix='',
@@ -216,10 +216,22 @@ class TimeDistributedDataFrameIterator(DataFrameIterator):
             A batch of transformed samples.
         """
         TimeSteps = self.image_data_generator.time_steps
-        batch_x = np.zeros((len(index_array),) + (TimeSteps,) + self.image_shape, dtype=self.dtype)#KJ
+        # batch_x = np.zeros((len(index_array),) + (TimeSteps,) + self.image_shape, dtype=self.dtype)#KJ
         # build batch of image data
         # self.filepaths is dynamic, is better to call it once outside the loop
         filepaths = self.filepaths
+        new_index_array = []
+
+        # added this part to make the skip happen
+        count = 0
+        for i, j in enumerate(index_array):
+            if count % TimeSteps == 0:
+                new_index_array.append(j)
+            count += 1
+        
+        index_array = new_index_array
+        batch_x = np.zeros((len(index_array),) + (TimeSteps,) + self.image_shape, dtype=self.dtype)#KJ
+        
         for i, j in enumerate(index_array):
             for k in reversed(range(0,TimeSteps)):
                 try:
